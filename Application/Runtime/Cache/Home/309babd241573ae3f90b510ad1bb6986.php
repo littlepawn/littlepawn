@@ -73,11 +73,11 @@
 						<button class="btn btn-primary btn-lg" type="button" id="change">更改头像</button>
 					</div>
 					<div class="col-md-8">
-						<form class="form-horizontal" role="form">
+						<form class="form-horizontal" role="form" action="/index.php/Home/Index/update_userinfo" method="post">
 							<div class="form-group">
 								<label class="control-label col-md-2">用户名</label>
 								<div class="col-md-6">
-									<input class="form-control" type="text">
+									<input class="form-control" type="text" name="name" placeholder="<?php echo ($name); ?>">
 								</div>
 								<!--<div class="col-md-4"></div>-->
 							</div>
@@ -109,23 +109,23 @@
 							<div class="form-group">
 								 <label class="control-label col-md-2">性别</label>
 					   			 <div class="col-md-6">
-					    			  <input class="radio radio-inline" type="radio" value="option1" name="sex">男
-					    			  <input class="radio radio-inline" type="radio" value="option1" name="sex">女
+					    			  <input class="radio radio-inline" type="radio" value="男" name="sex">男
+					    			  <input class="radio radio-inline" type="radio" value="女" name="sex">女
 					   			 </div>
 							</div>
 							
 							<div class="form-group">
 								<label for="inputBirth" class="col-md-2 control-label">所在城市</label>
 								<div class="col-md-4">
-									<select class="form-control">
-										<option>江苏省</option>
+									<select name="province" class="form-control">
+										<option value="江苏">江苏省</option>
 										<option>浙江省</option>
 										<option>广东省</option>
 									</select>
 								</div>
 								<div class="col-md-2">
-									<select class="form-control">
-										<option>徐州</option>
+									<select name="city" class="form-control">
+										<option value="徐州">徐州</option>
 										<option>南京</option>
 										<option>苏州</option>
 										<option>无锡</option>
@@ -141,8 +141,8 @@
 									</select>
 								</div>
 								<div class="col-md-2">
-									<select class="form-control">
-										<option>铜山</option>
+									<select name="area" class="form-control">
+										<option value="铜山">铜山</option>
 										<option>泉山</option>
 										<option>贾汪</option>
 									</select>
@@ -152,7 +152,7 @@
 							<div class="form-group">
 								<div class="col-md-1"></div>
 								<div class="col-md-5 col-md-offset-1">
-									<input class="btn btn-info btn-lg btn-block" type="button" value="保存"/>
+									<input class="btn btn-info btn-lg btn-block" type="submit" value="保存"/>
 								</div>
 								<!--<div class="col-md-7"></div>-->
 							</div>

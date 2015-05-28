@@ -56,7 +56,7 @@
 		<div class="row">
 			<div class="col-md-9"></div>
 			<div class="col-md-1" id="pubbtn">
-				<button class="btn btn-info">发布房屋信息</button>
+				<button class="btn btn-info" data-toggle="modal" data-target="#myModal">发布房屋信息</button>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
@@ -216,6 +216,26 @@
 			</nav>
 		</div>
 		<div class="col-md-2"></div>
+		
+		<div class='row'>
+			 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">提示</h4>
+				      </div>
+				      <div class="modal-body">
+				        	<h3 style="text-align: center;">请先登录</h3>
+				      </div>
+				      <div class="modal-footer">
+				      	<button type="button" class="btn btn-primary" id="redirect">登录</button>
+				        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				      </div>
+				    </div>
+			       </div>
+			</div>
+	    </div>
 	</div>
 
   </body>
@@ -226,6 +246,9 @@
 		});
 		$("#reg").click(function(){
 			window.location.href="/index.php/Home/Index/register";
+		});
+		$("#redirect").click(function(){
+			window.location.href="/index.php/Home/Index/login";
 		});
 	 });
   </script>

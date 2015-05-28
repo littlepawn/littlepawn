@@ -242,4 +242,9 @@
 		<div class="col-md-2"></div>
 	</div>
   </body>
+  <script type="text/javascript">
+  	$("#pubbtn button").click(function(){
+		window.location.href="/index.php/Home/Index/publish1";
+	});
+  </script>
 </html>
