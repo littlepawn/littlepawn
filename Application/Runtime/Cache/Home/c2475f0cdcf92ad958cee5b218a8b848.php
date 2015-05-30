@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
     <style type="text/css">
     	body { 
     		padding-top: 50px; 
@@ -74,20 +74,20 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="__CONTROLLER__/main">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/main">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
 	      	<div class="col-md-2">
 	      		<button type="button" class="btn btn-info navbar-btn navbar-right dropdown-toggle"  data-toggle="dropdown">
-					{$name}<span class="caret"></span>
+					<?php echo ($name); ?><span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
-   					 <li><a tabindex="-1" href="__CONTROLLER__/main">返回主页</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/main">返回主页</a></li>
    					 <li><a tabindex="-1" href="javascript:history.go(-1);">返回上一页</a></li>
-   					 <li><a tabindex="-1" href="__CONTROLLER__/userinfo">查看个人信息</a></li>
-   					 <li><a tabindex="-1" href="__CONTROLLER__/houserentinfo">查看发布信息</a></li>
-    				 <li><a tabindex="-1" href="__CONTROLLER__/loginout">退出</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/houserentinfo">查看发布信息</a></li>
+    				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>
     			</ul>
 	      	</div>
 	    </div>

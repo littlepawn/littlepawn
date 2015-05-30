@@ -34,9 +34,8 @@
     		text-align: center;
     	}
     	#username{
-    		text-align: center;
+    		text-align: left;
     	}
-    	
     </style>
   </head>
   <body>
@@ -44,7 +43,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="#">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/main">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -79,7 +78,7 @@
 						<form class="form-horizontal" role="form">
 							<div class="form-group">
 								<label class="control-label col-md-2">用户名</label>
-								<label class="control-label col-md-2" id="username">
+								<label class="control-label col-md-4" id="username">
 									<?php echo ($name); ?>
 								</label>
 							</div>

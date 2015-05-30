@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理系统</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
  	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
  	<style type="text/css">
 		#mainbody{
 			margin: 30px auto;
@@ -27,7 +27,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-8 col-md-offset-1">
-	      		<a class="navbar-brand" href="__CONTROLLER__/index">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/index">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -41,7 +41,7 @@
 	<div class="container" id="mainbody">
 		<div class="row">
 			<div class="col-md-6">
-				<form class="form-horizontal" role="form" action="__CONTROLLER__/insert" method="post">
+				<form class="form-horizontal" role="form" action="/index.php/Home/Index/insert" method="post">
 					<div class="form-group" id="demail">
 					   <input type="hidden" name="id"/> 
 					   <label for="inputEmail" class="col-md-2 control-label">邮箱</label>
@@ -91,7 +91,7 @@
   <script type="text/javascript">
 	 $(function(){
 		$("button").click(function(){
-			window.location.href="__CONTROLLER__/login";
+			window.location.href="/index.php/Home/Index/login";
 		});
 	});
   </script>

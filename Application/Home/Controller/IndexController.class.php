@@ -4,6 +4,20 @@ use Think\Controller;
 header("Content-Type: text/html; charset=utf8");
 class IndexController extends Controller {
     public function index(){
+    	$house=M('House');
+    	$data=$house->order('date')->limit(10)->select();
+    	$num=count($data);
+    	$title=$data[0]['title'];
+    	$rent=$data[0]['rent'];
+    	$address=$data[0]['address'];
+    	$livingroom=$data[0]['livingroom'];
+    	$bedroom=$data[0]['bedroom'];
+    	$this->assign("title",$title);
+    	$this->assign("rent",$rent);
+    	$this->assign("address",$address);
+    	$this->assign("bedroom",$bedroom);
+    	$this->assign("livingroom",$livingroom);
+    	$this->assign("num",$num);
 		$this->display();
     }   
     
@@ -14,6 +28,20 @@ class IndexController extends Controller {
     public function main(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
 			$this->assign('name',$_SESSION['user']["name"]);
+			$house=M('House');
+			$data=$house->order('date')->limit(10)->select();
+			$num=count($data);
+			$title=$data[0]['title'];
+			$rent=$data[0]['rent'];
+			$address=$data[0]['address'];
+			$livingroom=$data[0]['livingroom'];
+			$bedroom=$data[0]['bedroom'];
+			$this->assign("title",$title);
+			$this->assign("rent",$rent);
+			$this->assign("address",$address);
+			$this->assign("bedroom",$bedroom);
+			$this->assign("livingroom",$livingroom);
+			$this->assign("num",$num);
     		$this->display();
     	}else{
     		$this->redirect("index");
@@ -38,7 +66,7 @@ class IndexController extends Controller {
     					"area"=>$data[0]['area'],			
     					),
     			));
-    			echo $this->success("登录成功","main");
+    			echo $this->redirect("main");
     		}else{
     			echo $this->error("登录失败","login");
     		}
@@ -229,6 +257,27 @@ class IndexController extends Controller {
 	    			echo $this->error("更新失败","userinfo");
 	    		}
 	    	}
+    	}
+    }
+    
+    public function editpassword(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$this->display();
+    	}
+    }
+    
+    public function editemail(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$this->display();
+    	}
+    }
+    
+    public function editphone(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$this->display();
     	}
     }
 }

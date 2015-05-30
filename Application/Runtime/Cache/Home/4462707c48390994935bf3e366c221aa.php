@@ -40,7 +40,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="">
+	      		<a class="navbar-brand" href="javacript:;">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -191,15 +191,15 @@
 				</div>
 				<div class="col-md-8">
 					<table class="table table-hover">
-						<tr><th>Header</th></tr>
-						<tr><td>Data</td></tr>
+						<tr><th><?php echo ($title); ?></th></tr>
+						<tr><td>位置:<?php echo ($address); ?></td></tr>
 						<tr><td>Data</td></tr>
 					</table>
 				</div>
 				<div class="col-md-2">
 					<table class="table table-hover">
-						<tr><th>500元/月</th></tr>
-						<tr><td>三室一厅</td></tr>
+						<tr><th><?php echo ($rent); ?>元/月</th></tr>
+						<tr><td><?php echo ($bedroom); ?>室<?php echo ($livingroom); ?>厅</td></tr>
 					</table>
 				</div>
 			</div>
