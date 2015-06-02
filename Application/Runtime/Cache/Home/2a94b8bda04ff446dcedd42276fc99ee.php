@@ -180,37 +180,36 @@
 			  <li role="presentation" class="active"><a href="#">出租房信息</a></li>
 			  <li role="presentation"><a href="#">求租房信息</a></li>
 			</ul>
-			<div class="row house-list">
-				<div class="col-md-2 picture">
-					<img class="img-thumbnail" src="/Public/i/1.jpg" alt="..." >
-				</div>
-				<div class="col-md-8">
-					<table class="table table-hover">
-						<tr><th><?php echo ($title); ?></th></tr>
-						<tr><td>位置:<?php echo ($address); ?></td></tr>
-						<tr><td>Data</td></tr>
-					</table>
-				</div>
-				<div class="col-md-2">
-					<table class="table table-hover">
-						<tr><th><?php echo ($rent); ?>元/月</th></tr>
-						<tr><td><?php echo ($bedroom); ?>室<?php echo ($livingroom); ?>厅</td></tr>
-					</table>
-				</div>
-			</div>
+			
+			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row house-list">
+					<div class="col-md-2 picture">
+						<img class="img-thumbnail" src="/Public/i/1.jpg" alt="..." >
+					</div>
+					<div class="col-md-8">
+						<table class="table table-hover">
+							<tr><th><a style="text-decoration: none" href="/index.php/Home/Index/torentinfobefore/id/<?php echo ($vo[id]); ?>" id="torentinfo"><?php echo ($vo['title']); ?></a></th></tr>
+							<tr><td>位置:<?php echo ($vo['address']); ?></td></tr>
+							<tr><td>Data</td></tr>
+						</table>
+					</div>
+					<div class="col-md-2">
+						<table class="table table-hover">
+							<tr><th><?php echo ($vo['rent']); ?>元/月</th></tr>
+							<tr><td><?php echo ($vo['bedroom']); ?>室<?php echo ($vo['livingroom']); ?>厅</td></tr>
+						</table>
+					</div>
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
+			
 		</div>
 		<div class="col-md-1"></div>
+		
 		
 		<div class="col-md-1"></div>
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="#">&laquo;</a></li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
+			    <?php $__FOR_START_27326__=1;$__FOR_END_27326__=$pagecount;for($i=$__FOR_START_27326__;$i < $__FOR_END_27326__;$i+=1){ ?><li><a href="javascript:;"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="#">&raquo;</a></li>
 			  </ul>
 			</nav>

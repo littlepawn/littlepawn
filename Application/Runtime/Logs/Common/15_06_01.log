@@ -1,0 +1,12 @@
+[ 2015-06-01T18:51:53+08:00 ] 127.0.0.1 /index.php/rentinfobefore
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Rentinfobefore
+
+[ 2015-06-01T18:52:03+08:00 ] 127.0.0.1 /index.php/rentinfobefore
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Rentinfobefore
+

@@ -50,6 +50,7 @@
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
 				     <li><a tabindex="-1" href="/index.php/Home/Index/main">返回主页</a></li>
+				     <li><a tabindex="-1" href="javascript:history.go(-1);">返回上一页</a></li>
    					 <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
    					 <li><a tabindex="-1" href="/index.php/Home/Index/houserentinfo">查看发布信息</a></li>
     				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>

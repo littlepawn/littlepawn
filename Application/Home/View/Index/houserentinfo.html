@@ -87,30 +87,29 @@
   		</div>
   		
   		<div class="row">
+  			
+  			<volist name="data" id="vo">
   			<div class="col-md-3"></div>
   			<div class="col-md-8" id="info">
-  				<!--<div class="col-md-1 checkbox">
-  					<label>
-			          <input type="checkbox">
-			        </label>
-  				</div>-->
   				<div class="col-md-2 picture">
 					<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
 				</div>
 				<div class="col-md-6">
 					<table class="table table-hover">
-						<tr><th>Header</th></tr>
-						<tr><td>Data</td></tr>
+						<tr><th>{$vo.title}</th></tr>
+						<tr><td>位置:{$vo.address}</td></tr>
 						<tr><td>Data</td></tr>
 					</table>
 				</div>
 				<div class="col-md-2">
 					<table class="table table-hover">
-						<tr><th>500元/月</th></tr>
-						<tr><td>三室一厅</td></tr>
+						<tr><th>{$vo.rent}元/月</th></tr>
+						<tr><td>{$vo.bedroom}室{$vo.livingroom}厅</td></tr>
 					</table>
 				</div>
   			</div>
+  			</volist>
+  			
   		</div>
   		
   		<div class="row">
@@ -119,8 +118,9 @@
   				<nav>
 				  <ul class="pagination">
 				    <li><a href="#">&laquo;</a></li>
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
+				    <for start="1" end="$pagecount">
+				    	<li><a href="#">{$i}</a></li>
+				    </for>
 				    <li><a href="#">&raquo;</a></li>
 				  </ul>
 				</nav>

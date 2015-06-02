@@ -53,7 +53,7 @@
  						<label>
    							<input type="checkbox"> 记住密码
    						</label>
-   						<a href="" class="alocation">忘记密码</a>
+   						<a href="/index.php/Home/Index/findpwd1" class="alocation">忘记密码</a>
   					</div>			  			
   						
   					<hr />

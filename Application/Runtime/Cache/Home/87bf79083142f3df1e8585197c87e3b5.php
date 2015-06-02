@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理系统</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
     <style type="text/css">
     	body { 
     		padding-top: 50px; 
@@ -53,20 +53,20 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="__CONTROLLER__/main">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/main">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
 	      	<div class="col-md-2">
 	      		<button type="button" class="btn btn-info navbar-btn navbar-right dropdown-toggle"  data-toggle="dropdown">
-					{$name}<span class="caret"></span>
+					<?php echo ($name); ?><span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
-   					 <li><a tabindex="-1" href="__CONTROLLER__/main">返回主页</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/main">返回主页</a></li>
    					 <li><a tabindex="-1" href="javascript:history.go(-1);">返回上一页</a></li>
-   					 <li><a tabindex="-1" href="__CONTROLLER__/userinfo">查看个人信息</a></li>
-   					 <li><a tabindex="-1" href="__CONTROLLER__/houserentinfo">查看发布信息</a></li>
-    				 <li><a tabindex="-1" href="__CONTROLLER__/loginout">退出</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/houserentinfo">查看发布信息</a></li>
+    				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>
     			</ul>
 	      	</div>
 	    </div>
@@ -100,33 +100,31 @@
   		
   		<div class="row" id="mainbody">
   			
-  			<volist name="data" id="vo">
-	  			<div class="col-md-3"></div>
+  			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-md-3"></div>
 	  			<div class="col-md-8" id="info">
 	  				<div class="col-md-1 checkbox">
 	  					<label>
-				          <input type="checkbox" name="houseid" value="{$id}">
+				          <input type="checkbox" name="houseid" value="<?php echo ($id); ?>">
 				        </label>
 	  				</div>
 	  				<div class="col-md-2 picture">
-						<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
+						<img class="img-thumbnail" src="/Public/i/1.jpg" alt="..." >
 						<button class="btn btn-sm btn-success">更换图片</button>
 					</div>
 					<div class="col-md-6">
 						<table class="table table-hover">
-							<tr><th><input class="input-block-level" type="text" placeholder="{$vo['title']}" name="title"></th></tr>
-							<tr><td><input class="input-block-level" type="text" placeholder="位置：{$vo['address']}" name="address"></td></tr>
+							<tr><th><input class="input-block-level" type="text" placeholder="<?php echo ($vo['title']); ?>" name="title"></th></tr>
+							<tr><td><input class="input-block-level" type="text" placeholder="位置：<?php echo ($vo['address']); ?>" name="address"></td></tr>
 							<tr><td>Data</td></tr>
 						</table>
 					</div>
 					<div class="col-md-2">
 						<table class="table table-hover">
-							<tr><th><input class="input-block-level" type="text" placeholder="{$vo['rent']}" name="rent">元/月</th></tr>
-							<tr><td><input style="width: 50px" class="input-block-level" type="text" placeholder="{$vo['bedroom']}" name="bedroom">室<input style="width: 50px" class="input-block-level" type="text" placeholder="{$vo['livingroom']}" name="livingroom">厅</td></tr>
+							<tr><th><input class="input-block-level" type="text" placeholder="<?php echo ($vo['rent']); ?>" name="rent">元/月</th></tr>
+							<tr><td><input style="width: 50px" class="input-block-level" type="text" placeholder="<?php echo ($vo['bedroom']); ?>" name="bedroom">室<input style="width: 50px" class="input-block-level" type="text" placeholder="<?php echo ($vo['livingroom']); ?>" name="livingroom">厅</td></tr>
 						</table>
 					</div>
-	  			</div>
-	  		</volist>
+	  			</div><?php endforeach; endif; else: echo "" ;endif; ?>
   			
   			
   		</div>
@@ -137,9 +135,7 @@
   				<nav>
 				  <ul class="pagination">
 				    <li><a href="#">&laquo;</a></li>
-				    <for start="1" end="$pagecount">
-				    	<li><a href="#">{$i}</a></li>
-				    </for>
+				    <?php $__FOR_START_1823__=1;$__FOR_END_1823__=$pagecount;for($i=$__FOR_START_1823__;$i < $__FOR_END_1823__;$i+=1){ ?><li><a href="#"><?php echo ($i); ?></a></li><?php } ?>
 				    <li><a href="#">&raquo;</a></li>
 				  </ul>
 				</nav>
@@ -152,10 +148,10 @@
 	$(function(){
 		$("#del").click(function(){
 			
-			window.location.href="__CONTROLLER__/delhouserentinfo";
+			window.location.href="/index.php/Home/Index/delhouserentinfo";
 		});
 		$("#save").click(function(){
-			window.location.href="__CONTROLLER__/savehouserentinfo";
+			window.location.href="/index.php/Home/Index/savehouserentinfo";
 		});
 	});
 </script>  

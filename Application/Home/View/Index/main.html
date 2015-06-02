@@ -185,43 +185,27 @@
 			  <li role="presentation" class="active"><a href="#">出租房信息</a></li>
 			  <li role="presentation"><a href="#">求租房信息</a></li>
 			</ul>
-			<div class="row house-list">
-				<div class="col-md-2 picture">
-					<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
+			<volist name="data" id="vo">
+				<div class="row house-list">
+					<div class="col-md-2 picture">
+						<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
+					</div>
+					<div class="col-md-8">
+						<table class="table table-hover">
+							<tr><th><a style="text-decoration: none" href="__CONTROLLER__/torentinfoafter/id/{$vo[id]}" id="torentinfo">{$vo['title']}</a></th></tr>
+							<tr><td>位置:{$vo['address']}</td></tr>
+							<tr><td>Data</td></tr>
+						</table>
+					</div>
+					<div class="col-md-2">
+						<table class="table table-hover">
+							<tr><th>{$vo['rent']}元/月</th></tr>
+							<tr><td>{$vo['bedroom']}室{$vo['livingroom']}厅</td></tr>
+						</table>
+					</div>
 				</div>
-				<div class="col-md-8">
-					<table class="table table-hover">
-						<tr><th>{$title}</th></tr>
-						<tr><td>位置:{$address}</td></tr>
-						<tr><td>Data</td></tr>
-					</table>
-				</div>
-				<div class="col-md-2">
-					<table class="table table-hover">
-						<tr><th>{$rent}元/月</th></tr>
-						<tr><td>{$bedroom}室{$livingroom}厅</td></tr>
-					</table>
-				</div>
-			</div>
+			</volist>
 			
-			<div class="row house-list">
-				<div class="col-md-2 picture">
-					<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
-				</div>
-				<div class="col-md-8">
-					<table class="table table-hover">
-						<tr><th>Header</th></tr>
-						<tr><td>Data</td></tr>
-						<tr><td>Data</td></tr>
-					</table>
-				</div>
-				<div class="col-md-2">
-					<table class="table table-hover">
-						<tr><th>500元/月</th></tr>
-						<tr><td>三室一厅</td></tr>
-					</table>
-				</div>
-			</div>
 		</div>
 		<div class="col-md-1"></div>
 		

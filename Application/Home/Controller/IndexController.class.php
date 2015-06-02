@@ -4,20 +4,16 @@ use Think\Controller;
 header("Content-Type: text/html; charset=utf8");
 class IndexController extends Controller {
     public function index(){
+    	$pagesize=10;
+    	//$pagenow=
     	$house=M('House');
-    	$data=$house->order('date')->limit(10)->select();
-    	$num=count($data);
-    	$title=$data[0]['title'];
-    	$rent=$data[0]['rent'];
-    	$address=$data[0]['address'];
-    	$livingroom=$data[0]['livingroom'];
-    	$bedroom=$data[0]['bedroom'];
-    	$this->assign("title",$title);
-    	$this->assign("rent",$rent);
-    	$this->assign("address",$address);
-    	$this->assign("bedroom",$bedroom);
-    	$this->assign("livingroom",$livingroom);
-    	$this->assign("num",$num);
+    	$data=$house->order('date')->select();
+    	$rowcount=count($data);
+    	$pagecount=($rowcount-1)/$pagesize+1;
+    	$this->assign("rowcount",$rowcount);
+    	$this->assign("data",$data);
+    	$this->assign("pagecount",$pagecount);
+    	$this->assign("pagesize",$pagesize);
 		$this->display();
     }   
     
@@ -28,21 +24,17 @@ class IndexController extends Controller {
     public function main(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
 			$this->assign('name',$_SESSION['user']["name"]);
-			$house=M('House');
-			$data=$house->order('date')->limit(10)->select();
-			$num=count($data);
-			$title=$data[0]['title'];
-			$rent=$data[0]['rent'];
-			$address=$data[0]['address'];
-			$livingroom=$data[0]['livingroom'];
-			$bedroom=$data[0]['bedroom'];
-			$this->assign("title",$title);
-			$this->assign("rent",$rent);
-			$this->assign("address",$address);
-			$this->assign("bedroom",$bedroom);
-			$this->assign("livingroom",$livingroom);
-			$this->assign("num",$num);
-    		$this->display();
+			$pagesize=10;
+	    	//$pagenow=
+	    	$house=M('House');
+	    	$data=$house->order('date')->select();
+	    	$rowcount=count($data);
+	    	$pagecount=($rowcount-1)/$pagesize+1;
+	    	$this->assign("rowcount",$rowcount);
+	    	$this->assign("data",$data);
+	    	$this->assign("pagecount",$pagecount);
+	    	$this->assign("pagesize",$pagesize);
+			$this->display();
     	}else{
     		$this->redirect("index");
     	}
@@ -151,14 +143,36 @@ class IndexController extends Controller {
     public function houserentinfo(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
-    		$this->display();
+    		$name=$_SESSION['user']['name'];
+    		$pagesize=10;
+	    	//$pagenow=
+	    	$house=M('House');
+	    	$data=$house->order('date')->select();
+	    	$rowcount=count($data);
+	    	$pagecount=($rowcount-1)/$pagesize+1;
+	    	$this->assign("rowcount",$rowcount);
+	    	$this->assign("data",$data);
+	    	$this->assign("pagecount",$pagecount);
+	    	$this->assign("pagesize",$pagesize);
+	    	$this->display();
     	}
     }
     
     public function edithouserentinfo(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
-    		$this->display();
+    		$name=$_SESSION['user']['name'];
+    		$pagesize=10;
+	    	//$pagenow=
+	    	$house=M('House');
+	    	$data=$house->order('date')->select();
+	    	$rowcount=count($data);
+	    	$pagecount=($rowcount-1)/$pagesize+1;
+	    	$this->assign("rowcount",$rowcount);
+	    	$this->assign("data",$data);
+	    	$this->assign("pagecount",$pagecount);
+	    	$this->assign("pagesize",$pagesize);
+	    	$this->display();
     	}
     }
     
@@ -279,6 +293,41 @@ class IndexController extends Controller {
     		$this->assign('name',$_SESSION['user']["name"]);
     		$this->display();
     	}
+    }
+    
+    public function delhouserentinfo(){
+    	$this->redirect("houserentinfo");
+    }
+    
+    public function savehouserentinfo(){
+    	$this->redirect("houserentinfo");
+    }
+    
+    public function torentinfobefore(){
+    	if(isset($_GET['id'])){
+    		$id=$_GET['id'];
+	    	$house=M('House');
+	    	$data=$house->where("id='$id'")->select();
+	    	$this->assign("data",$data);
+    		$this->display("rentinfobefore");
+    	}
+    }
+    
+    public function torentinfoafter(){
+    if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$house=M("House");
+    		if(isset($_GET['id'])){
+    			$id=$_GET['id'];
+    			$data=$house->where("id='$id'")->select();
+    			$this->assign("data",$data);
+    			$this->display("rentinfoafter");
+    		}
+    	}
+    }
+    
+    public function findpwd1(){
+    	$this->display();
     }
 }
 
