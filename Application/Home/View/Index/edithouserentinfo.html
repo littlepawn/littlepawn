@@ -136,11 +136,11 @@
   			<div class="col-md-4">
   				<nav>
 				  <ul class="pagination">
-				    <li><a href="#">&laquo;</a></li>
-				    <for start="1" end="$pagecount">
-				    	<li><a href="#">{$i}</a></li>
-				    </for>
-				    <li><a href="#">&raquo;</a></li>
+				     <li><a href="__CONTROLLER__/edithouserentinfo/pagenow/1">&laquo;</a></li>
+			    	<for start="1" end="$pagecount+1">
+			    		<li><a href="__CONTROLLER__/edithouserentinfo/pagenow/{$i}">{$i}</a></li>
+			   	 	</for>
+			   		<li><a href="__CONTROLLER__/edithouserentinfo/pagenow/{$pagecount}">&raquo;</a></li>
 				  </ul>
 				</nav>
   			</div>

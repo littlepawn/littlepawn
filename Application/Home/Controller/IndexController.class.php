@@ -4,17 +4,35 @@ use Think\Controller;
 header("Content-Type: text/html; charset=utf8");
 class IndexController extends Controller {
     public function index(){
-    	$pagesize=10;
-    	//$pagenow=
+    	$pagesize=2;
     	$house=M('House');
-    	$data=$house->order('date')->select();
-    	$rowcount=count($data);
-    	$pagecount=($rowcount-1)/$pagesize+1;
+    	$list=$house->order('date')->select();
+    	$rowcount=count($list);
+    	if(($rowcount-1)%2!=0){
+    		$pagecount=($rowcount-2)/$pagesize+1;
+    	}else{
+    		$pagecount=($rowcount-1)/$pagesize+1;
+    	}
     	$this->assign("rowcount",$rowcount);
-    	$this->assign("data",$data);
     	$this->assign("pagecount",$pagecount);
     	$this->assign("pagesize",$pagesize);
-		$this->display();
+    	if(isset($_GET['pagenow'])){
+    		$pagenow=$_GET['pagenow'];
+    		$limit=($pagenow-1)*$pagesize;
+    		if($pagenow>1){
+	    		$data=$house->order('date')->limit($limit,$pagesize)->select();
+	    		$this->assign("data",$data);
+	    		$this->display();
+    		}else {
+    			$data=$house->order('date')->limit($pagesize)->select();
+    			$this->assign("data",$data);
+    			$this->display();
+    		}
+    	}else{
+    		$data=$house->order('date')->limit($pagesize)->select();  		
+	    	$this->assign("data",$data);	    	
+			$this->display();
+    	}
     }   
     
     public function login(){
@@ -24,17 +42,35 @@ class IndexController extends Controller {
     public function main(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
 			$this->assign('name',$_SESSION['user']["name"]);
-			$pagesize=10;
-	    	//$pagenow=
-	    	$house=M('House');
-	    	$data=$house->order('date')->select();
-	    	$rowcount=count($data);
-	    	$pagecount=($rowcount-1)/$pagesize+1;
-	    	$this->assign("rowcount",$rowcount);
-	    	$this->assign("data",$data);
-	    	$this->assign("pagecount",$pagecount);
-	    	$this->assign("pagesize",$pagesize);
+    	$pagesize=2;
+    	$house=M('House');
+    	$list=$house->order('date')->select();
+    	$rowcount=count($list);
+    	if(($rowcount-1)%2!=0){
+    		$pagecount=($rowcount-2)/$pagesize+1;
+    	}else{
+    		$pagecount=($rowcount-1)/$pagesize+1;
+    	}
+    	$this->assign("rowcount",$rowcount);
+    	$this->assign("pagecount",$pagecount);
+    	$this->assign("pagesize",$pagesize);
+    	if(isset($_GET['pagenow'])){
+    		$pagenow=$_GET['pagenow'];
+    		$limit=($pagenow-1)*$pagesize;
+    		if($pagenow>1){
+	    		$data=$house->order('date')->limit($limit,$pagesize)->select();
+	    		$this->assign("data",$data);
+	    		$this->display();
+    		}else {
+    			$data=$house->order('date')->limit($pagesize)->select();
+    			$this->assign("data",$data);
+    			$this->display();
+    		}
+    	}else{
+    		$data=$house->order('date')->limit($pagesize)->select();  		
+	    	$this->assign("data",$data);	    	
 			$this->display();
+    	}
     	}else{
     		$this->redirect("index");
     	}
@@ -144,17 +180,35 @@ class IndexController extends Controller {
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
     		$name=$_SESSION['user']['name'];
-    		$pagesize=10;
-	    	//$pagenow=
+	    	$pagesize=2;
 	    	$house=M('House');
-	    	$data=$house->order('date')->select();
-	    	$rowcount=count($data);
-	    	$pagecount=($rowcount-1)/$pagesize+1;
+	    	$list=$house->order('date')->where("houseowner='$name'")->select();
+	    	$rowcount=count($list);
+	    	if(($rowcount-1)%2!=0){
+	    		$pagecount=($rowcount-2)/$pagesize+1;
+	    	}else{
+	    		$pagecount=($rowcount-1)/$pagesize+1;
+	    	}
 	    	$this->assign("rowcount",$rowcount);
-	    	$this->assign("data",$data);
 	    	$this->assign("pagecount",$pagecount);
 	    	$this->assign("pagesize",$pagesize);
-	    	$this->display();
+	    	if(isset($_GET['pagenow'])){
+	    		$pagenow=$_GET['pagenow'];
+	    		$limit=($pagenow-1)*$pagesize;
+	    		if($pagenow>1){
+		    		$data=$house->order('date')->where("houseowner='$name'")->limit($limit,$pagesize)->select();
+		    		$this->assign("data",$data);
+		    		$this->display();
+	    		}else {
+	    			$data=$house->order('date')->where("houseowner='$name'")->limit($pagesize)->select();
+	    			$this->assign("data",$data);
+	    			$this->display();
+	    		}
+	    	}else{
+	    		$data=$house->order('date')->where("houseowner='$name'")->limit($pagesize)->select();  		
+		    	$this->assign("data",$data);	    	
+				$this->display();
+	    	}
     	}
     }
     
@@ -162,17 +216,35 @@ class IndexController extends Controller {
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
     		$name=$_SESSION['user']['name'];
-    		$pagesize=10;
-	    	//$pagenow=
+	    	$pagesize=2;
 	    	$house=M('House');
-	    	$data=$house->order('date')->select();
-	    	$rowcount=count($data);
-	    	$pagecount=($rowcount-1)/$pagesize+1;
+	    	$list=$house->order('date')->where("houseowner='$name'")->select();
+	    	$rowcount=count($list);
+	    	if(($rowcount-1)%2!=0){
+	    		$pagecount=($rowcount-2)/$pagesize+1;
+	    	}else{
+	    		$pagecount=($rowcount-1)/$pagesize+1;
+	    	}
 	    	$this->assign("rowcount",$rowcount);
-	    	$this->assign("data",$data);
 	    	$this->assign("pagecount",$pagecount);
 	    	$this->assign("pagesize",$pagesize);
-	    	$this->display();
+	    	if(isset($_GET['pagenow'])){
+	    		$pagenow=$_GET['pagenow'];
+	    		$limit=($pagenow-1)*$pagesize;
+	    		if($pagenow>1){
+		    		$data=$house->order('date')->where("houseowner='$name'")->limit($limit,$pagesize)->select();
+		    		$this->assign("data",$data);
+		    		$this->display();
+	    		}else {
+	    			$data=$house->order('date')->where("houseowner='$name'")->limit($pagesize)->select();
+	    			$this->assign("data",$data);
+	    			$this->display();
+	    		}
+	    	}else{
+	    		$data=$house->order('date')->where("houseowner='$name'")->limit($pagesize)->select();  		
+		    	$this->assign("data",$data);	    	
+				$this->display();
+	    	}
     	}
     }
     

@@ -134,9 +134,9 @@
   			<div class="col-md-4">
   				<nav>
 				  <ul class="pagination">
-				    <li><a href="#">&laquo;</a></li>
-				    <?php $__FOR_START_1823__=1;$__FOR_END_1823__=$pagecount;for($i=$__FOR_START_1823__;$i < $__FOR_END_1823__;$i+=1){ ?><li><a href="#"><?php echo ($i); ?></a></li><?php } ?>
-				    <li><a href="#">&raquo;</a></li>
+				     <li><a href="/index.php/Home/Index/edithouserentinfo/pagenow/1">&laquo;</a></li>
+			    	<?php $__FOR_START_22643__=1;$__FOR_END_22643__=$pagecount+1;for($i=$__FOR_START_22643__;$i < $__FOR_END_22643__;$i+=1){ ?><li><a href="/index.php/Home/Index/edithouserentinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			   		<li><a href="/index.php/Home/Index/edithouserentinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>
   			</div>

@@ -210,11 +210,11 @@
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
-			    <li><a href="#">&laquo;</a></li>
-			    <for start="1" end="$pagecount">
-			    	<li><a href="javascript:;">{$i}</a></li>
+			    <li><a href="__CONTROLLER__/index/pagenow/1">&laquo;</a></li>
+			    <for start="1" end="$pagecount+1">
+			    	<li><a href="__CONTROLLER__/index/pagenow/{$i}">{$i}</a></li>
 			    </for>
-			    <li><a href="#">&raquo;</a></li>
+			    <li><a href="__CONTROLLER__/index/pagenow/{$pagecount}">&raquo;</a></li>
 			  </ul>
 			</nav>
 		</div>

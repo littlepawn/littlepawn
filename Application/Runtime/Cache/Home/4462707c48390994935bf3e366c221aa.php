@@ -211,13 +211,9 @@
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
-			    <li><a href="#">&laquo;</a></li>
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			    <li><a href="#">5</a></li>
-			    <li><a href="#">&raquo;</a></li>
+			    <li><a href="/index.php/Home/Index/main/pagenow/1">&laquo;</a></li>
+			    <?php $__FOR_START_2985__=1;$__FOR_END_2985__=$pagecount+1;for($i=$__FOR_START_2985__;$i < $__FOR_END_2985__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>
 		</div>

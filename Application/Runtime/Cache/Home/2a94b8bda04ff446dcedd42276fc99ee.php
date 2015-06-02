@@ -208,9 +208,9 @@
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
-			    <li><a href="#">&laquo;</a></li>
-			    <?php $__FOR_START_27326__=1;$__FOR_END_27326__=$pagecount;for($i=$__FOR_START_27326__;$i < $__FOR_END_27326__;$i+=1){ ?><li><a href="javascript:;"><?php echo ($i); ?></a></li><?php } ?>
-			    <li><a href="#">&raquo;</a></li>
+			    <li><a href="/index.php/Home/Index/index/pagenow/1">&laquo;</a></li>
+			    <?php $__FOR_START_18058__=1;$__FOR_END_18058__=$pagecount+1;for($i=$__FOR_START_18058__;$i < $__FOR_END_18058__;$i+=1){ ?><li><a href="/index.php/Home/Index/index/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <li><a href="/index.php/Home/Index/index/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>
 		</div>
