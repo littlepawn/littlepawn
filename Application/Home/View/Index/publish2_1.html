@@ -223,9 +223,9 @@
 					    	<input type="submit" class="btn btn-danger btn-block btn-lg" id="publish" value="确认并发布">
 					   	</div>
 					</div>
-					
 				</div>
-			</div>
+				
+			</form>
 			</div>
 			<div class="col-md-5"></div>
 		</div>

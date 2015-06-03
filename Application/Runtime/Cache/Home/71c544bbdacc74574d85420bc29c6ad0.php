@@ -30,8 +30,8 @@
 		.house-list{
     		margin-top: 20px;
     	}
-    	#reg{
-    		margin-left: 20px;
+    	#name{
+    		margin-left: 120px;
     	}
     </style>
   </head>
@@ -45,8 +45,14 @@
 	      		</a>
 	      	</div>
 	      	<div class="col-md-2">
-	      		<input id="login" type="button" class="btn btn-info navbar-btn navbar-left" value="登录">
-	      		<input id="reg" type="button" class="btn btn-info navbar-btn navbar-middle" value="注册">
+	      		<button type="button" class="btn btn-info navbar-btn navbar-right dropdown-toggle"  data-toggle="dropdown">
+					<?php echo ($name); ?><span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
+   					  <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/houserentinfo">查看发布信息</a></li>
+    				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>
+    			</ul>
 	      	</div>
 	    </div>
 	  </div>
@@ -56,7 +62,7 @@
 		<div class="row">
 			<div class="col-md-9"></div>
 			<div class="col-md-1" id="pubbtn">
-				<button class="btn btn-info" data-toggle="modal" data-target="#myModal">发布房屋信息</button>
+				<button class="btn btn-info">发布房屋信息</button>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
@@ -177,78 +183,33 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10 house-info">
 			<ul class="nav nav-pills" role="tablist">
-			  <li role="presentation" class="active"><a href="/index.php/Home/Index/index">出租房信息</a></li>
-			  <li role="presentation"><a href="/index.php/Home/Index/wantedindex">求租房信息</a></li>
+			  <li role="presentation"><a href="/index.php/Home/Index/main">出租房信息</a></li>
+			  <li role="presentation"  class="active"><a href="/index.php/Home/Index/wantedmain">求租房信息</a></li>
 			</ul>
-			
 			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row house-list">
-					<div class="col-md-2 picture">
-						<img class="img-thumbnail" src="/Public/i/1.jpg" alt="..." >
-					</div>
-					<div class="col-md-8">
-						<table class="table table-hover">
-							<tr><th><a style="text-decoration: none" href="/index.php/Home/Index/torentinfobefore/id/<?php echo ($vo[id]); ?>" id="torentinfo"><?php echo ($vo['title']); ?></a></th></tr>
-							<tr><td>位置:<?php echo ($vo['address']); ?></td></tr>
-							<tr><td>Data</td></tr>
-						</table>
-					</div>
-					<div class="col-md-2">
-						<table class="table table-hover">
-							<tr><th><?php echo ($vo['rent']); ?>元/月</th></tr>
-							<tr><td><?php echo ($vo['bedroom']); ?>室<?php echo ($vo['livingroom']); ?>厅</td></tr>
-						</table>
-					</div>
+					<table class="table table-bordered">
+							<tr>
+								<th><?php echo ($vo["title"]); ?></th>
+								<th><?php echo ($vo["rent"]); ?>元/月</th>
+								<th><?php echo ($vo["type"]); ?></th>
+								<th>手机：<?php echo ($vo["phone"]); ?></th>
+							</tr>
+					</table>
 				</div><?php endforeach; endif; else: echo "" ;endif; ?>
-			
 		</div>
 		<div class="col-md-1"></div>
-		
 		
 		<div class="col-md-1"></div>
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
-			    <li><a href="/index.php/Home/Index/index/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_32249__=1;$__FOR_END_32249__=$pagecount+1;for($i=$__FOR_START_32249__;$i < $__FOR_END_32249__;$i+=1){ ?><li><a href="/index.php/Home/Index/index/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
-			    <li><a href="/index.php/Home/Index/index/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
+			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/1">&laquo;</a></li>
+			    <?php $__FOR_START_29489__=1;$__FOR_END_29489__=$pagecount+1;for($i=$__FOR_START_29489__;$i < $__FOR_END_29489__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>
 		</div>
 		<div class="col-md-2"></div>
-		
-		<div class='row'>
-			 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-sm">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">提示</h4>
-				      </div>
-				      <div class="modal-body">
-				        	<h3 style="text-align: center;">请先登录</h3>
-				      </div>
-				      <div class="modal-footer">
-				      	<button type="button" class="btn btn-primary" id="redirect">登录</button>
-				        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				      </div>
-				    </div>
-			       </div>
-			</div>
-	    </div>
 	</div>
-
-  </body>
-  <script type="text/javascript">
-	 $(function(){
-		$("#login").click(function(){
-			window.location.href="/index.php/Home/Index/login";
-		});
-		$("#reg").click(function(){
-			window.location.href="/index.php/Home/Index/register";
-		});
-		$("#redirect").click(function(){
-			window.location.href="/index.php/Home/Index/login";
-		});
-	 });
-  </script>
+</body>
 </html>

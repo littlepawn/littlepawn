@@ -121,85 +121,89 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-6">
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label class="control-label col-md-2">标题</label>
-						<div class="col-md-6">
-					    	<input class="form-control" type="text">
-					   	</div>
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-md-2">求租地段</label>
-						<div class="col-md-3">
-							<select class="form-control">
-								<option>--省份--</option>
-							</select>
-						</div>
-						<div class="col-md-3">
-							<select class="form-control">
-								<option>--城市--</option>
-							</select>
-						</div>
-						<div class="col-md-3">
-							<select class="form-control">
-								<option>--区域--</option>
-							</select>
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-md-2">期望</label>
-						<div class="col-md-4">
-							<select class="form-control">
-								<option>--租金--</option>
-								<option>500元/月以下</option>
-								<option>500-1000元/月</option>
-								<option>1000-2000元/月</option>
-								<option>2000元/月以上</option>
-							</select>
-						</div>
-						<div class="col-md-4">
-							<select class="form-control">
-								<option>--期望厅室--</option>
-								<option>一室一厅</option>>
-								<option>两室一厅</option>>
-								<option>三室一厅</option>>
-								<option>三室两厅</option>>
-							</select>
+				<form role="form" method="post" action="__CONTROLLER__/checkpublish2_2">
+					<div class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-md-2">标题</label>
+							<div class="col-md-6">
+						    	<input class="form-control" type="text" name="title">
+						   	</div>
 						</div>
 						
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-md-2">内容描述</label>
-						<div class="col-md-8">
-							<textarea class="form-control" rows="4"></textarea>
+						<div class="form-group">
+							<label class="control-label col-md-2">求租地段</label>
+							<div class="col-md-3">
+								<select class="form-control" name="province">
+									<option>--省份--</option>
+									<option value="江苏">江苏省</option>
+								</select>
+							</div>
+							<div class="col-md-3">
+								<select class="form-control" name="city">
+									<option>--城市--</option>
+									<option value="徐州">徐州</option>
+								</select>
+							</div>
+							<div class="col-md-3">
+								<select class="form-control" name="area">
+									<option>--区域--</option>
+									<option value="铜山">铜山</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-2">期望</label>
+							<div class="col-md-4">
+								<select class="form-control" name="rent">
+									<option>--租金--</option>
+									<option value="500以下">500元/月以下</option>
+									<option value="500-1000">500-1000元/月</option>
+									<option value="1000-2000">1000-2000元/月</option>
+									<option value="2000以上">2000元/月以上</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<select class="form-control" name="type">
+									<option>--期望厅室--</option>
+									<option value="一室一厅">一室一厅</option>
+									<option value="两室一厅">两室一厅</option>
+									<option value="三室一厅">三室一厅</option>
+									<option value="三室两厅">三室两厅</option>
+								</select>
+							</div>
+							
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-2">内容描述</label>
+							<div class="col-md-8">
+								<textarea class="form-control" rows="4" name="context"></textarea>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-2">联系人</label>
+							<div class="col-md-6">
+						    	<input class="form-control" type="text" name="name">
+						   	</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-2">联系电话</label>
+							<div class="col-md-6">
+						    	<input class="form-control" type="text" name="phone">
+						   	</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="col-md-2"></div>
+							<div class="col-md-6">
+						    	<input type="submit" class="btn btn-danger btn-block btn-lg" id="publish" value="确认并发布">
+						   	</div>
 						</div>
 					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-md-2">联系人</label>
-						<div class="col-md-6">
-					    	<input class="form-control" type="text">
-					   	</div>
-					</div>
-					
-					<div class="form-group">
-						<label class="control-label col-md-2">联系电话</label>
-						<div class="col-md-6">
-					    	<input class="form-control" type="text">
-					   	</div>
-					</div>
-					
-					<div class="form-group">
-						<div class="col-md-2"></div>
-						<div class="col-md-6">
-					    	<button class="btn btn-danger btn-block btn-lg">确认并发布</button>
-					   	</div>
-					</div>
-					
-				</div>
+				</form>
 			</div>
 			<div class="col-md-5"></div>
 		</div>

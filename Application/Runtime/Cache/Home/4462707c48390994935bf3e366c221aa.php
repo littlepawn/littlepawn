@@ -182,8 +182,8 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10 house-info">
 			<ul class="nav nav-pills" role="tablist">
-			  <li role="presentation" class="active"><a href="#">出租房信息</a></li>
-			  <li role="presentation"><a href="#">求租房信息</a></li>
+			  <li role="presentation" class="active"><a href="/index.php/Home/Index/main">出租房信息</a></li>
+			  <li role="presentation"><a href="/index.php/Home/Index/wantedmain">求租房信息</a></li>
 			</ul>
 			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row house-list">
 					<div class="col-md-2 picture">
@@ -212,7 +212,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/main/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_2985__=1;$__FOR_END_2985__=$pagecount+1;for($i=$__FOR_START_2985__;$i < $__FOR_END_2985__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_5080__=1;$__FOR_END_5080__=$pagecount+1;for($i=$__FOR_START_5080__;$i < $__FOR_END_5080__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>
