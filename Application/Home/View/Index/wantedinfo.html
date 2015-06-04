@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理系统</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+	<load href='__PUBLIC__/css/bootstrap.min.css' />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
     <load href='__PUBLIC__/js/bootstrap.min.js' />
     <style type="text/css">
@@ -55,7 +55,7 @@
 					{$name}<span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
-					 <li><a tabindex="-1" href="__CONTROLLER__/main">返回主页</a></li>
+   					 <li><a tabindex="-1" href="__CONTROLLER__/main">返回主页</a></li>
    					 <li><a tabindex="-1" href="__CONTROLLER__/userinfo">查看个人信息</a></li>
     				 <li><a tabindex="-1" href="__CONTROLLER__/loginout">退出</a></li>
     			</ul>
@@ -75,8 +75,8 @@
 				</ul>
 				<div class="col-md-2">
 					<ul class="nav nav-pills nav-stacked" role="tablist">
-					    <li class="active"><a href="javascript:;">房屋出租信息</a></li>
-					    <li><a href="__CONTROLLER__/wantedinfo">房屋求租信息</a></li>
+					     <li><a href="__CONTROLLER__/houserentinfo">房屋出租信息</a></li>
+					    <li class="active"><a href="javascript:;">房屋求租信息</a></li>
 					</ul>
 				</div>
 				<div class="col-md-8"></div>
@@ -86,42 +86,34 @@
 			</div>
   		</div>
   		
-  		<div class="row">
-  			
-  			<volist name="data" id="vo">
-  			<div class="col-md-3"></div>
-  			<div class="col-md-8" id="info">
-  				<div class="col-md-2 picture">
-					<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
-				</div>
-				<div class="col-md-6">
-					<table class="table table-hover">
-						<tr><th>{$vo.title}</th></tr>
-						<tr><td>位置:{$vo.address}</td></tr>
-						<tr><td>Data</td></tr>
-					</table>
-				</div>
-				<div class="col-md-2">
-					<table class="table table-hover">
-						<tr><th>{$vo.rent}元/月</th></tr>
-						<tr><td>{$vo.bedroom}室{$vo.livingroom}厅</td></tr>
-					</table>
-				</div>
-  			</div>
-  			</volist>
-  			
-  		</div>
+  		<volist name="data" id="vo">
+	  		<div class="row">
+	  			<div class="col-md-3"></div>
+	  			<div class="col-md-8" id="info">
+	  				<div class="col-md-10">
+						<table class="table table-bordered">
+							<tr>
+								<th>{$vo.title}</th>
+								<th>{$vo.rent}元/月</th>
+								<th>{$vo.type}</th>
+								<th>手机：{$vo.phone}</th>
+							</tr>
+						</table>
+					</div>
+	  			</div>
+	  		</div>
+  		</volist>
   		
   		<div class="row">
   			<div class="col-md-8"></div>
   			<div class="col-md-4">
   				<nav>
 				  <ul class="pagination">
-				    <li><a href="__CONTROLLER__/houserentinfo/pagenow/1">&laquo;</a></li>
+				    <li><a href="__CONTROLLER__/wantedinfo/pagenow/1">&laquo;</a></li>
 			    	<for start="1" end="$pagecount+1">
-			    		<li><a href="__CONTROLLER__/houserentinfo/pagenow/{$i}">{$i}</a></li>
+			    		<li><a href="__CONTROLLER__/wantedinfo/pagenow/{$i}">{$i}</a></li>
 			   	 	</for>
-			   		<li><a href="__CONTROLLER__/houserentinfo/pagenow/{$pagecount}">&raquo;</a></li>
+			   		<li><a href="__CONTROLLER__/wantedinfo/pagenow/{$pagecount}">&raquo;</a></li>
 				  </ul>
 				</nav>
   			</div>
@@ -131,7 +123,7 @@
 <script type="text/javascript">
 	$(function(){
 		$("#edit button").click(function(){
-			window.location.href="__CONTROLLER__/edithouserentinfo";
+			window.location.href="__CONTROLLER__/editwantedinfo";
 		})
 	});
 </script>

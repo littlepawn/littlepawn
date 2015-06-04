@@ -40,7 +40,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="javacript:;">
+	      		<a class="navbar-brand" href="javascript:;">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -212,7 +212,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/main/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_5080__=1;$__FOR_END_5080__=$pagecount+1;for($i=$__FOR_START_5080__;$i < $__FOR_END_5080__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_22447__=1;$__FOR_END_22447__=$pagecount+1;for($i=$__FOR_START_22447__;$i < $__FOR_END_22447__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>

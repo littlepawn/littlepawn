@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房屋信息管理系统</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+	<link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
     <style type="text/css">
     	body { 
     		padding-top: 50px; 
@@ -39,6 +39,9 @@
     	.house-info{
 			margin: 20px auto;
 		}
+		#name{
+    		margin-left: 120px;
+    	}
     </style>
   </head>
   <body>
@@ -46,62 +49,70 @@
 		  <div class="container">
 		    <div class="row">
 		    	<div class="col-md-10">
-		      		<a class="navbar-brand" href="__CONTROLLER__/wantedindex">
+		      		<a class="navbar-brand" href="/index.php/Home/Index/wantedmain">
 		        		<p>房产信息管理</p>
 		      		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<button type="button" class="btn btn-info navbar-btn navbar-right" id="login" >登录</button>
+		      		<button type="button" class="btn btn-info navbar-btn navbar-right dropdown-toggle"  data-toggle="dropdown">
+						<?php echo ($name); ?><span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
+	   					<li><a tabindex="-1" href="/index.php/Home/Index/main">返回主页</a></li>
+	   					 <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
+	   					 <li><a tabindex="-1" href="/index.php/Home/Index/houserentinfo">查看发布信息</a></li>
+	    				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>
+	    			</ul>
 		      	</div>
 		    </div>
 		  </div>
 	</nav>
 	
-	<div class="container">
+		<div class="container">
 		<div class="row" id="mainbody"></div>
 			<div class="col-md-1"></div>
 			<div class="col-md-8" id="info">
-				<h1>{$data['0']['title']}</h1>
+				<h1><?php echo ($data['0']['title']); ?></h1>
 				<hr />
 				<div class="col-md-8">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
 						   <label class="col-md-3 control-label">期望价格</label>
-						   <label class="col-md-4 control-label" id="rent" style="text-align: left;">{$data['0']['rent']}元/月</label>
+						   <label class="col-md-4 control-label" id="rent" style="text-align: left;"><?php echo ($data['0']['rent']); ?>元/月</label>
 						</div>
 						
 						<div class="form-group">
 						   <label class="col-md-3 control-label">期望概况</label>
-						   <label class="col-md-4 control-label" id="allocation" style="text-align: left;">{$data['0']['type']}</label>
+						   <label class="col-md-4 control-label" id="allocation" style="text-align: left;"><?php echo ($data['0']['type']); ?></label>
 						</div>
 						
 						<div class="form-group">
 						   <label class="col-md-3 control-label">求租地段</label>
 						   <div class="col-md-3">
 								<select class="form-control" disabled="disabled">
-									<option selected="selected">{$data['0']['province']}</option>
+									<option selected="selected"><?php echo ($data['0']['province']); ?></option>
 								</select>
 						   </div>
 						   <div class="col-md-3">
 								<select class="form-control" disabled="disabled">
-									<option selected="selected">{$data['0']['city']}</option>
+									<option selected="selected"><?php echo ($data['0']['city']); ?></option>
 								</select>
 						   </div>
 						   <div class="col-md-3">
 								<select class="form-control" disabled="disabled">
-									<option selected="selected">{$data['0']['area']}</option>
+									<option selected="selected"><?php echo ($data['0']['area']); ?></option>
 								</select>
 						   </div>
 						</div>
 						
 						<div class="form-group">
 						   <label class="col-md-3 control-label">联系人</label>
-						   <label class="col-md-3 control-label" id="username" style="text-align: left;">{$data['0']['name']}</label>
+						   <label class="col-md-3 control-label" id="username" style="text-align: left;"><?php echo ($data['0']['name']); ?></label>
 						</div>
 						
 						<div class="form-group" id="phone">
-						   <img class="col-md-3" src="__PUBLIC__/i/phone.jpg" alt="" id="picture"/>
-						   <label class="col-md-4 control-label" id="phonenum">123****8901</label>
+						   <img class="col-md-3" src="/Public/i/phone.jpg" alt="" id="picture"/>
+						   <label class="col-md-4 control-label" id="phonenum"><?php echo ($data['0']['phone']); ?></label>
 						</div>
 					</form>
 					
@@ -129,12 +140,4 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
-	$(function(){
-		$("#login").click(function(){
-			window.location.href="__CONTROLLER__/login";
-		});
-	});
-</script> 
 </html>
-

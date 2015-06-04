@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理系统</title>
-	<load href='__PUBLIC__/css/bootstrap.min.css' />
+	<link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />    
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>    
     <style type="text/css">
     	body { 
     		padding-top: 50px; 
@@ -177,21 +177,19 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10 house-info">
 			<ul class="nav nav-pills" role="tablist">
-			  <li role="presentation"><a href="__CONTROLLER__/index">出租房信息</a></li>
-			  <li role="presentation"  class="active"><a href="__CONTROLLER__/wantedindex">求租房信息</a></li>
+			  <li role="presentation"><a href="/index.php/Home/Index/index">出租房信息</a></li>
+			  <li role="presentation"  class="active"><a href="/index.php/Home/Index/wantedindex">求租房信息</a></li>
 			</ul>
-			<volist name="data" id="vo">
-				<div class="filter">
+			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="filter">
 					<table class="table table-bordered">
 							<tr>
-								<th><a style="text-decoration: none" href="__CONTROLLER__/towantedinfobefore/id/{$vo[id]}" id="towantinfo">{$vo.title}</a></th>
-								<th>{$vo.rent}元/月</th>
-								<th>{$vo.type}</th>
-								<th>手机：{$vo.phone}</th>
+								<th><a style="text-decoration: none" href="/index.php/Home/Index/towantedinfobefore/id/<?php echo ($vo[id]); ?>" id="towantinfo"><?php echo ($vo["title"]); ?></a></th>
+								<th><?php echo ($vo["rent"]); ?>元/月</th>
+								<th><?php echo ($vo["type"]); ?></th>
+								<th>手机：<?php echo ($vo["phone"]); ?></th>
 							</tr>
 					</table>
-				</div>
-			</volist>
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
 		<div class="col-md-1"></div>
 		
@@ -199,11 +197,9 @@
 		<div class="col-md-8 col-md-offset-1">
 			<nav>
 			  <ul class="pagination">
-			    <li><a href="__CONTROLLER__/wantedindex/pagenow/1">&laquo;</a></li>
-			    <for start="1" end="$pagecount+1">
-			    	<li><a href="__CONTROLLER__/wantedindex/pagenow/{$i}">{$i}</a></li>
-			    </for>
-			    <li><a href="__CONTROLLER__/wantedindex/pagenow/{$pagecount}">&raquo;</a></li>
+			    <li><a href="/index.php/Home/Index/wantedindex/pagenow/1">&laquo;</a></li>
+			    <?php $__FOR_START_15348__=1;$__FOR_END_15348__=$pagecount+1;for($i=$__FOR_START_15348__;$i < $__FOR_END_15348__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedindex/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <li><a href="/index.php/Home/Index/wantedindex/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>
 		</div>
@@ -233,13 +229,13 @@
   <script type="text/javascript">
 	 $(function(){
 		$("#login").click(function(){
-			window.location.href="__CONTROLLER__/login";
+			window.location.href="/index.php/Home/Index/login";
 		});
 		$("#reg").click(function(){
-			window.location.href="__CONTROLLER__/register";
+			window.location.href="/index.php/Home/Index/register";
 		});
 		$("#redirect").click(function(){
-			window.location.href="__CONTROLLER__/login";
+			window.location.href="/index.php/Home/Index/login";
 		});
 	 });
   </script>

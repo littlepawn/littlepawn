@@ -40,7 +40,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="javacript:;">
+	      		<a class="navbar-brand" href="javascript:;">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -189,7 +189,7 @@
 			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row house-list">
 					<table class="table table-bordered">
 							<tr>
-								<th><?php echo ($vo["title"]); ?></th>
+								<th><a style="text-decoration: none" href="/index.php/Home/Index/towantedinfoafter/id/<?php echo ($vo[id]); ?>" id="towantedinfo"><?php echo ($vo["title"]); ?></a></th>
 								<th><?php echo ($vo["rent"]); ?>元/月</th>
 								<th><?php echo ($vo["type"]); ?></th>
 								<th>手机：<?php echo ($vo["phone"]); ?></th>
@@ -204,7 +204,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_29489__=1;$__FOR_END_29489__=$pagecount+1;for($i=$__FOR_START_29489__;$i < $__FOR_END_29489__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_1758__=1;$__FOR_END_1758__=$pagecount+1;for($i=$__FOR_START_1758__;$i < $__FOR_END_1758__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>

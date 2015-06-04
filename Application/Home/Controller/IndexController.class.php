@@ -281,6 +281,42 @@ class IndexController extends Controller {
     	}
     }
     
+    public function wantedinfo(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$name=$_SESSION['user']['name'];
+    		$pagesize=2;
+    		$house=M('Wantedhouse');
+    		$list=$house->order('date')->where("publisher='$name'")->select();
+    		$rowcount=count($list);
+    		if(($rowcount-1)%2!=0){
+    			$pagecount=($rowcount-2)/$pagesize+1;
+    		}else{
+    			$pagecount=($rowcount-1)/$pagesize+1;
+    		}
+    		$this->assign("rowcount",$rowcount);
+    		$this->assign("pagecount",$pagecount);
+    		$this->assign("pagesize",$pagesize);
+    		if(isset($_GET['pagenow'])){
+    			$pagenow=$_GET['pagenow'];
+    			$limit=($pagenow-1)*$pagesize;
+    			if($pagenow>1){
+    				$data=$house->order('date desc')->where("publisher='$name'")->limit($limit,$pagesize)->select();
+    				$this->assign("data",$data);
+    				$this->display();
+    			}else {
+    				$data=$house->order('date desc')->where("publisher='$name'")->limit($pagesize)->select();
+    				$this->assign("data",$data);
+    				$this->display();
+    			}
+    		}else{
+    			$data=$house->order('date desc')->where("publisher='$name'")->limit($pagesize)->select();
+    			$this->assign("data",$data);
+    			$this->display();
+    		}
+    	}
+    }
+    
     public function edithouserentinfo(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
@@ -314,6 +350,42 @@ class IndexController extends Controller {
 		    	$this->assign("data",$data);	    	
 				$this->display();
 	    	}
+    	}
+    }
+    
+    public function editwantedinfo(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$name=$_SESSION['user']['name'];
+    		$pagesize=2;
+    		$house=M('Wantedhouse');
+    		$list=$house->order('date desc')->where("publisher='$name'")->select();
+    		$rowcount=count($list);
+    		if(($rowcount-1)%2!=0){
+    			$pagecount=($rowcount-2)/$pagesize+1;
+    		}else{
+    			$pagecount=($rowcount-1)/$pagesize+1;
+    		}
+    		$this->assign("rowcount",$rowcount);
+    		$this->assign("pagecount",$pagecount);
+    		$this->assign("pagesize",$pagesize);
+    		if(isset($_GET['pagenow'])){
+    			$pagenow=$_GET['pagenow'];
+    			$limit=($pagenow-1)*$pagesize;
+    			if($pagenow>1){
+    				$data=$house->order('date desc')->where("publisher='$name'")->limit($limit,$pagesize)->select();
+    				$this->assign("data",$data);
+    				$this->display();
+    			}else {
+    				$data=$house->order('date desc')->where("publisher='$name'")->limit($pagesize)->select();
+    				$this->assign("data",$data);
+    				$this->display();
+    			}
+    		}else{
+    			$data=$house->order('date desc')->where("publisher='$name'")->limit($pagesize)->select();
+    			$this->assign("data",$data);
+    			$this->display();
+    		}
     	}
     }
     
@@ -482,8 +554,18 @@ class IndexController extends Controller {
     	}
     }
     
+    public function towantedinfobefore(){
+    	if(isset($_GET['id'])){
+    		$id=$_GET['id'];
+    		$house=M('Wantedhouse');
+    		$data=$house->where("id='$id'")->select();
+    		$this->assign("data",$data);
+    		$this->display("wantedinfobefore");
+    	}
+    }
+    
     public function torentinfoafter(){
-    if(isset($_SESSION['user'])||!$_SESSION['user']){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
     		$house=M("House");
     		if(isset($_GET['id'])){
@@ -491,6 +573,19 @@ class IndexController extends Controller {
     			$data=$house->where("id='$id'")->select();
     			$this->assign("data",$data);
     			$this->display("rentinfoafter");
+    		}
+    	}
+    }
+    
+    public function towantedinfoafter(){
+    	if(isset($_SESSION['user'])||!$_SESSION['user']){
+    		$this->assign('name',$_SESSION['user']["name"]);
+    		$house=M("Wantedhouse");
+    		if(isset($_GET['id'])){
+    			$id=$_GET['id'];
+    			$data=$house->where("id='$id'")->select();
+    			$this->assign("data",$data);
+    			$this->display("wantedinfoafter");
     		}
     	}
     }

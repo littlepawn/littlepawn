@@ -67,7 +67,7 @@
 			<div class="col-md-10">
 				    <ul class="nav nav-tabs">
 					    <li class="active">
-					    	<a href="">个人资料</a>
+					    	<a href="javascript:;">个人资料</a>
 					    </li>
 					</ul>
 					<div class="col-md-4" id="head-sculpture">

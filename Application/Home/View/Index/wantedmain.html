@@ -40,7 +40,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="javacript:;">
+	      		<a class="navbar-brand" href="javascript:;">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -190,7 +190,7 @@
 				<div class="row house-list">
 					<table class="table table-bordered">
 							<tr>
-								<th>{$vo.title}</th>
+								<th><a style="text-decoration: none" href="__CONTROLLER__/towantedinfoafter/id/{$vo[id]}" id="towantedinfo">{$vo.title}</a></th>
 								<th>{$vo.rent}元/月</th>
 								<th>{$vo.type}</th>
 								<th>手机：{$vo.phone}</th>

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>房产信息管理系统</title>
-    <load href='__PUBLIC__/css/bootstrap.min.css' />
+	<link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
-    <load href='__PUBLIC__/js/bootstrap.min.js' />
+    <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
     <style type="text/css">
     	body { 
     		padding-top: 50px; 
@@ -46,18 +46,18 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="__CONTROLLER__/main">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/main">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
 	      	<div class="col-md-2">
 	      		<button type="button" class="btn btn-info navbar-btn navbar-right dropdown-toggle"  data-toggle="dropdown">
-					{$name}<span class="caret"></span>
+					<?php echo ($name); ?><span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" id="name">
-					 <li><a tabindex="-1" href="__CONTROLLER__/main">返回主页</a></li>
-   					 <li><a tabindex="-1" href="__CONTROLLER__/userinfo">查看个人信息</a></li>
-    				 <li><a tabindex="-1" href="__CONTROLLER__/loginout">退出</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/main">返回主页</a></li>
+   					 <li><a tabindex="-1" href="/index.php/Home/Index/userinfo">查看个人信息</a></li>
+    				 <li><a tabindex="-1" href="/index.php/Home/Index/loginout">退出</a></li>
     			</ul>
 	      	</div>
 	    </div>
@@ -75,8 +75,8 @@
 				</ul>
 				<div class="col-md-2">
 					<ul class="nav nav-pills nav-stacked" role="tablist">
-					    <li class="active"><a href="javascript:;">房屋出租信息</a></li>
-					    <li><a href="__CONTROLLER__/wantedinfo">房屋求租信息</a></li>
+					     <li><a href="/index.php/Home/Index/houserentinfo">房屋出租信息</a></li>
+					    <li class="active"><a href="javascript:;">房屋求租信息</a></li>
 					</ul>
 				</div>
 				<div class="col-md-8"></div>
@@ -86,42 +86,30 @@
 			</div>
   		</div>
   		
-  		<div class="row">
-  			
-  			<volist name="data" id="vo">
-  			<div class="col-md-3"></div>
-  			<div class="col-md-8" id="info">
-  				<div class="col-md-2 picture">
-					<img class="img-thumbnail" src="__PUBLIC__/i/1.jpg" alt="..." >
-				</div>
-				<div class="col-md-6">
-					<table class="table table-hover">
-						<tr><th>{$vo.title}</th></tr>
-						<tr><td>位置:{$vo.address}</td></tr>
-						<tr><td>Data</td></tr>
-					</table>
-				</div>
-				<div class="col-md-2">
-					<table class="table table-hover">
-						<tr><th>{$vo.rent}元/月</th></tr>
-						<tr><td>{$vo.bedroom}室{$vo.livingroom}厅</td></tr>
-					</table>
-				</div>
-  			</div>
-  			</volist>
-  			
-  		</div>
+  		<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="row">
+	  			<div class="col-md-3"></div>
+	  			<div class="col-md-8" id="info">
+	  				<div class="col-md-10">
+						<table class="table table-bordered">
+							<tr>
+								<th><?php echo ($vo["title"]); ?></th>
+								<th><?php echo ($vo["rent"]); ?>元/月</th>
+								<th><?php echo ($vo["type"]); ?></th>
+								<th>手机：<?php echo ($vo["phone"]); ?></th>
+							</tr>
+						</table>
+					</div>
+	  			</div>
+	  		</div><?php endforeach; endif; else: echo "" ;endif; ?>
   		
   		<div class="row">
   			<div class="col-md-8"></div>
   			<div class="col-md-4">
   				<nav>
 				  <ul class="pagination">
-				    <li><a href="__CONTROLLER__/houserentinfo/pagenow/1">&laquo;</a></li>
-			    	<for start="1" end="$pagecount+1">
-			    		<li><a href="__CONTROLLER__/houserentinfo/pagenow/{$i}">{$i}</a></li>
-			   	 	</for>
-			   		<li><a href="__CONTROLLER__/houserentinfo/pagenow/{$pagecount}">&raquo;</a></li>
+				    <li><a href="/index.php/Home/Index/wantedinfo/pagenow/1">&laquo;</a></li>
+			    	<?php $__FOR_START_8848__=1;$__FOR_END_8848__=$pagecount+1;for($i=$__FOR_START_8848__;$i < $__FOR_END_8848__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			   		<li><a href="/index.php/Home/Index/wantedinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>
   			</div>
@@ -131,7 +119,7 @@
 <script type="text/javascript">
 	$(function(){
 		$("#edit button").click(function(){
-			window.location.href="__CONTROLLER__/edithouserentinfo";
+			window.location.href="/index.php/Home/Index/editwantedinfo";
 		})
 	});
 </script>

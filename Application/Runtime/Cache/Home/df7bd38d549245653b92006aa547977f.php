@@ -70,13 +70,13 @@
 			<div class="col-md-10">
 				<ul class="nav nav-tabs">
 					    <li class="active" id="publish">
-					    	<a href="">发布信息</a>
+					    	<a href="javascript:;">发布信息</a>
 					    </li>
 				</ul>
 				<div class="col-md-2">
 					<ul class="nav nav-pills nav-stacked" role="tablist">
-					    <li class="active"><a href="">房屋出租信息</a></li>
-					    <li><a href="">房屋求租信息</a></li>
+					    <li class="active"><a href="javascript:;">房屋出租信息</a></li>
+					    <li><a href="/index.php/Home/Index/wantedinfo">房屋求租信息</a></li>
 					</ul>
 				</div>
 				<div class="col-md-8"></div>
@@ -116,7 +116,7 @@
   				<nav>
 				  <ul class="pagination">
 				    <li><a href="/index.php/Home/Index/houserentinfo/pagenow/1">&laquo;</a></li>
-			    	<?php $__FOR_START_17083__=1;$__FOR_END_17083__=$pagecount+1;for($i=$__FOR_START_17083__;$i < $__FOR_END_17083__;$i+=1){ ?><li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    	<?php $__FOR_START_25486__=1;$__FOR_END_25486__=$pagecount+1;for($i=$__FOR_START_25486__;$i < $__FOR_END_25486__;$i+=1){ ?><li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			   		<li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>
