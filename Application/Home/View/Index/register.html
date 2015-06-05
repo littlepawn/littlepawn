@@ -47,29 +47,28 @@
 					   <label for="inputEmail" class="col-md-2 control-label">邮箱</label>
 					   <div class="col-md-6">
    					   	   <input type="text" class="form-control" name="email" id="InputEmail" placeholder="Email">
-   					   	   <span class="help-block" style="display: none;" id="pemail">邮箱格式错误</span>
-   					   	   <span class="help-block" style="display: none;" id="pemail1">邮箱不能为空</span>
-   					   	   <span class="help-block" style="display: none;" id="pemail2">请填写正确的邮箱地址</span>
+   					   	   <span class="help-block" style="color: red">{$errorinfo}</span>
    					   </div>
 					</div>
 					<div class="form-group" id="dname">
 					    <label for="inputName" class="col-md-2 control-label">用户名</label>
 					    <div class="col-md-6">
 					      <input type="text" class="form-control" name="username" id="inputName" placeholder="Username">
-					      <span class="help-block" style="display: none;" id="pname">用户名格式错误</span>
-					      <span class="help-block" style="display: none;" id="pname1">用户名应由汉字，字母和数字组成</span>
+					      <span class="help-block" style="color: red">{$errorinfo}</span>
 					    </div>
 					</div>
 					<div class="form-group">
 					    <label for="inputPassword1" class="col-md-2 control-label">密码</label>
 					    <div class="col-md-6">
 					      <input type="password" class="form-control" name="password" id="inputPassword1" placeholder="Password">
+					      <span class="help-block" style="color: red">{$errorinfo}</span>
 					    </div>
 					</div>
 					<div class="form-group">
 					    <label for="inputPassword2" class="col-md-2 control-label">确认密码</label>
 					    <div class="col-md-6">
 					      <input type="password" class="form-control" name="repassword" id="inputPassword2" placeholder="Password">
+					      <span class="help-block" style="color: red">{$errorinfo}</span>
 					    </div>
 					</div>					   
 					

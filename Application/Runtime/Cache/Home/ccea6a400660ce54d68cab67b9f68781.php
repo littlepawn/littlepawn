@@ -38,16 +38,12 @@
   				<form role="form" method="post" action="/index.php/Home/Index/checklogin">
   					<h2>登录</h2>
   					<div class="form-group has-feedback" id="demail">
- 					   <label for="InputEmail">Email address</label>
+ 					   <label for="InputEmail">邮箱</label>
    					   <input type="text" class="form-control"  id="InputEmail" placeholder="Enter email" name="email">
-   					   <span class="help-block" style="display: none;" id="pwarning">邮箱格式错误</span>
-   					   <span class="help-block" style="display: none;" id="pwarning1">邮箱不能为空</span>
-   					   <!--<span class="glyphiconglyphicon-ok form-control-feedback"></span>-->
   					</div>
   					<div class="form-group">
-   					   <label for="Password">Password</label>
+   					   <label for="Password">密码</label>
 			  		   <input type="password" class="form-control" id="InputPassword" placeholder="Enter Password" name="password">
-			  		   <span class="help-block" style="display: none;" id="password1">密码不能为空</span>
 			  		</div>
 					<div class="checkbox">
  						<label>

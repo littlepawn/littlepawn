@@ -3,7 +3,36 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        //$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover,{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
-        $this->display();
+    	if(isset($_SESSION['admin'])&&!empty($_SESSION['admin'])){
+    		$user=M("User");
+			$data=$user->order("date desc")->select();
+			$this->assign("data",$data);    		
+        	$this->display();
+    	}
+    	$this->display();
+    }
+    
+    public function login(){
+    	$this->display();
+    }
+    
+    public function checklogin(){
+    	if(!empty($_POST['name'])&&!empty($_POST['password'])){
+    		$admin=M("Admin");
+    		$name=$_POST['name'];
+    		$password=md5($_POST['password']);
+    		if($admin->where("name='$name'"." AND"." password='$password'")->find()>0){
+    			$data=$admin->where("name='$name'")->field()->select();
+    			session("admin",array(
+    			"id"=>$data[0]['id'],
+    			"name"=>$data[0]['name'],
+    			));
+    			echo $this->redirect("index");
+    		}else{
+    			echo $this->error("登录失败","login");
+    		}
+    	}else{
+    		echo $this->error("登录失败","login");
+    	}
     }
 }

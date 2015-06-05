@@ -204,7 +204,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_1758__=1;$__FOR_END_1758__=$pagecount+1;for($i=$__FOR_START_1758__;$i < $__FOR_END_1758__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_10906__=1;$__FOR_END_10906__=$pagecount+1;for($i=$__FOR_START_10906__;$i < $__FOR_END_10906__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/wantedmain/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>

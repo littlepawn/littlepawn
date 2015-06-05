@@ -4,6 +4,14 @@ use Think\Controller;
 header("Content-Type: text/html; charset=utf8");
 class IndexController extends Controller {
     public function index(){
+    	$Province=M("Province");
+    	$province=$Province->select();
+    	$this->assign("province",$province);
+    	import('ORG.Net.IpLocation');
+		$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+    	$location = $Ip->getlocation();
+    	dump($location);
+    	$this->assign("location",$location['area']);
     	$pagesize=2;
     	$house=M('House');
     	$list=$house->order('date desc')->select();
@@ -34,6 +42,23 @@ class IndexController extends Controller {
 			$this->display();
     	}
     }   
+        
+    public function region(){
+    	$Province=M("Province");
+    	if(IS_POST){
+    		$pname=$_GET['province'];
+    		$province=$Province->where("name=$pname")->select();
+    		$provincecode=$province['0']['code'];
+    		$City=M("City");
+    		$city=$City->where("provincecode='$provincecode'")->select();
+    		$citycode=$city['0']['code'];
+    		$Area=M("Area");
+    		$area=$Area->where("citycode='$citycode'")->select();
+    		$this->ajaxReturn($region);
+    	}else{
+    		
+    	}
+    }
     
     public function wantedindex(){
     	$pagesize=2;
@@ -163,12 +188,12 @@ class IndexController extends Controller {
     					"area"=>$data[0]['area'],			
     					),
     			));
-    			echo $this->redirect("main");
+    			$this->redirect("main");
     		}else{
-    			echo $this->error("登录失败","login");
+    			$this->error("邮箱或密码错误","login");
     		}
     	}else{
-    		echo $this->error("登录失败","login");
+    		$this->error("登录失败","login");
     	}
     }
     
@@ -179,9 +204,9 @@ class IndexController extends Controller {
     public function insert(){
     	header('Content-Type:text/html; charset=utf-8');
     	$User=M("User");
-    	$data["id"]=$_POST["id"];
     	if(!empty($_POST["username"])&&!empty($_POST['email'])&&!empty($_POST['password'])){
-	    	$data["name"]=$_POST["username"];
+    		$data["id"]=$_POST["id"];
+    		$data["name"]=$_POST["username"];
 	    	$data["email"]=$_POST["email"];
 	    	$data["password"]=md5($_POST["password"]);
     	}
@@ -189,8 +214,8 @@ class IndexController extends Controller {
     	if($User->add($data)){
     		$this->redirect ('login');
     	}else{
-    		//exit ( $User->getError () );
-    		$this->redirect("register");
+    		$this->assign("errorinfo",$User->getError ());
+    		$this->display("register");
     	}
     }
     
