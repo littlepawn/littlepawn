@@ -4,14 +4,26 @@ use Think\Controller;
 header("Content-Type: text/html; charset=utf8");
 class IndexController extends Controller {
     public function index(){
+    	import('ORG.Net.IpLocation');
+    	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+    	$location = $Ip->getlocation();
+    	$region=$location['country'];
     	$Province=M("Province");
+    	if($Province->where("name='$region'")->find()<1){
+    		$region="上海市";
+    	}
+    	$this->assign("location",$region);
     	$province=$Province->select();
     	$this->assign("province",$province);
-    	import('ORG.Net.IpLocation');
-		$Ip = new \Org\Net\IpLocation('UTFWry.dat');
-    	$location = $Ip->getlocation();
-    	dump($location);
-    	$this->assign("location",$location['area']);
+    	$City=M("City");
+    	$provincecode=$province['0']['code'];
+    	$city=$City->where("provincecode='$provincecode'")->select();
+    	$Area=M("Area");
+    	$citycode=$city['0']['code'];
+    	$county=$Area->where("citycode='$citycode'")->select();
+    	$this->assign("city",$city);
+    	$this->assign("county",$county);
+    	
     	$pagesize=2;
     	$house=M('House');
     	$list=$house->order('date desc')->select();
@@ -61,6 +73,26 @@ class IndexController extends Controller {
     }
     
     public function wantedindex(){
+    	import('ORG.Net.IpLocation');
+    	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+    	$location = $Ip->getlocation();
+    	$region=$location['country'];
+    	$Province=M("Province");
+    	if($Province->where("name='$region'")->find()<1){
+    		$region="上海市";
+    	}
+    	$this->assign("location",$region);
+    	$province=$Province->select();
+    	$this->assign("province",$province);
+    	$City=M("City");
+    	$provincecode=$province['0']['code'];
+    	$city=$City->where("provincecode='$provincecode'")->select();
+    	$Area=M("Area");
+    	$citycode=$city['0']['code'];
+    	$county=$Area->where("citycode='$citycode'")->select();
+    	$this->assign("city",$city);
+    	$this->assign("county",$county);
+    	
     	$pagesize=2;
     	$house=M('Wantedhouse');
     	$list=$house->order('date desc')->select();
@@ -99,43 +131,85 @@ class IndexController extends Controller {
     public function main(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
 			$this->assign('name',$_SESSION['user']["name"]);
-    	$pagesize=2;
-    	$house=M('House');
-    	$list=$house->order('date desc')->select();
-    	$rowcount=count($list);
-    	if(($rowcount-1)%2!=0){
-    		$pagecount=($rowcount-2)/$pagesize+1;
-    	}else{
-    		$pagecount=($rowcount-1)/$pagesize+1;
-    	}
-    	$this->assign("rowcount",$rowcount);
-    	$this->assign("pagecount",$pagecount);
-    	$this->assign("pagesize",$pagesize);
-    	if(isset($_GET['pagenow'])){
-    		$pagenow=$_GET['pagenow'];
-    		$limit=($pagenow-1)*$pagesize;
-    		if($pagenow>1){
-	    		$data=$house->order('date desc')->limit($limit,$pagesize)->select();
-	    		$this->assign("data",$data);
-	    		$this->display();
-    		}else {
-    			$data=$house->order('date desc')->limit($pagesize)->select();
-    			$this->assign("data",$data);
-    			$this->display();
-    		}
-    	}else{
-    		$data=$house->order('date desc')->limit($pagesize)->select();  		
-	    	$this->assign("data",$data);	    	
-			$this->display();
-    	}
-    	}else{
-    		$this->redirect("index");
-    	}
+			
+			import('ORG.Net.IpLocation');
+			$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+			$location = $Ip->getlocation();
+			$region=$location['country'];
+			$Province=M("Province");
+			if($Province->where("name='$region'")->find()<1){
+				$region="上海市";
+			}
+			$this->assign("location",$region);
+			$province=$Province->select();
+			$this->assign("province",$province);
+			$City=M("City");
+			$provincecode=$province['0']['code'];
+			$city=$City->where("provincecode='$provincecode'")->select();
+			$Area=M("Area");
+			$citycode=$city['0']['code'];
+			$county=$Area->where("citycode='$citycode'")->select();
+			$this->assign("city",$city);
+			$this->assign("county",$county);
+			
+	    	$pagesize=2;
+	    	$house=M('House');
+	    	$list=$house->order('date desc')->select();
+	    	$rowcount=count($list);
+	    	if(($rowcount-1)%2!=0){
+	    		$pagecount=($rowcount-2)/$pagesize+1;
+	    	}else{
+	    		$pagecount=($rowcount-1)/$pagesize+1;
+	    	}
+	    	$this->assign("rowcount",$rowcount);
+	    	$this->assign("pagecount",$pagecount);
+	    	$this->assign("pagesize",$pagesize);
+	    	if(isset($_GET['pagenow'])){
+	    		$pagenow=$_GET['pagenow'];
+	    		$limit=($pagenow-1)*$pagesize;
+	    		if($pagenow>1){
+		    		$data=$house->order('date desc')->limit($limit,$pagesize)->select();
+		    		$this->assign("data",$data);
+		    		$this->display();
+	    		}else {
+	    			$data=$house->order('date desc')->limit($pagesize)->select();
+	    			$this->assign("data",$data);
+	    			$this->display();
+	    		}
+	    	}else{
+	    		$data=$house->order('date desc')->limit($pagesize)->select();  		
+		    	$this->assign("data",$data);	    	
+				$this->display();
+	    	}
+	    	}else{
+	    		$this->redirect("index");
+	    	}
     }
     
     public function wantedmain(){
     	if(isset($_SESSION['user'])||!$_SESSION['user']){
     		$this->assign('name',$_SESSION['user']["name"]);
+    		
+    		import('ORG.Net.IpLocation');
+    		$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+    		$location = $Ip->getlocation();
+    		$region=$location['country'];
+    		$Province=M("Province");
+    		if($Province->where("name='$region'")->find()<1){
+    			$region="上海市";
+    		}
+    		$this->assign("location",$region);
+    		$province=$Province->select();
+    		$this->assign("province",$province);
+    		$City=M("City");
+    		$provincecode=$province['0']['code'];
+    		$city=$City->where("provincecode='$provincecode'")->select();
+    		$Area=M("Area");
+    		$citycode=$city['0']['code'];
+    		$county=$Area->where("citycode='$citycode'")->select();
+    		$this->assign("city",$city);
+    		$this->assign("county",$county);
+    		
     		$pagesize=2;
     		$house=M('Wantedhouse');
     		$list=$house->order('date desc')->select();

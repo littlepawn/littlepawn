@@ -69,25 +69,24 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-10"  id="location-info">
 				<ul class="nav nav-tabs" role="tablist" id="mytab">
-				  <li role="presentation" class="active"><a href="#xuzhou" role="tab" data-toggle="tab">徐州</a></li>
 				  <li role="presentation" class="dropdown">
 				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				    	其他地区 <span class="caret"></span>
+				    	<?php echo ($location); ?>  <span class="caret"></span>
 				    </a>
 				    <ul class="dropdown-menu" role="menu">
-				      <li><a href="#beijing" role="tab" data-toggle="tab">北京</a></li>
-				      <li><a href="#nanjing" role="tab" data-toggle="tab">南京</a></li>
-				      <li><a href="#shanghai" role="tab" data-toggle="tab">上海</a></li>
+				      <?php if(is_array($province)): $i = 0; $__LIST__ = $province;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$province): $mod = ($i % 2 );++$i;?><li><a href="javascript:;" role="tab" data-toggle="tab" class="pro_a"><?php echo ($province["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 				    </ul>
 				  </li>
 				</ul>
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="xuzhou" >
-						<label id="label" >区域
-							<a class="btn active" href="">全徐州</a>
-							<a class="btn" href="">铜山</a>	
-							<a class="btn" href="">泉山</a>	
-							<a class="btn" href="">贾汪</a>	
+					<div role="tabpanel" class="tab-pane fade in active">
+						<label id="label" >城市
+							<?php if(is_array($city)): $i = 0; $__LIST__ = $city;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$city): $mod = ($i % 2 );++$i;?><a class="btn" href="javascript:;" class="city_a"><?php echo ($city["name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+						</label>
+						<br />
+						<label id="label" >地区
+							<?php if(is_array($county)): $i = 0; $__LIST__ = $county;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$county): $mod = ($i % 2 );++$i;?><a class="btn" href="javascript:;" class="county_a"><?php echo ($county["name"]); ?></a>
+								<?php if($i == 10 ): ?><br><?php $__FOR_START_18694__=1;$__FOR_END_18694__=10;for($i=$__FOR_START_18694__;$i < $__FOR_END_18694__;$i+=1){ ?>&nbsp;<?php } endif; endforeach; endif; else: echo "" ;endif; ?>
 						</label>
 						<br />
 						<label>租金
@@ -212,7 +211,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/main/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_25228__=1;$__FOR_END_25228__=$pagecount+1;for($i=$__FOR_START_25228__;$i < $__FOR_END_25228__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_7111__=1;$__FOR_END_7111__=$pagecount+1;for($i=$__FOR_START_7111__;$i < $__FOR_END_7111__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>

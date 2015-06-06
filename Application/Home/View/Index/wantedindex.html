@@ -64,25 +64,32 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-10"  id="location-info">
 				<ul class="nav nav-tabs" role="tablist" id="mytab">
-				  <li role="presentation" class="active"><a href="#xuzhou" role="tab" data-toggle="tab">徐州</a></li>
 				  <li role="presentation" class="dropdown">
 				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				    	其他地区 <span class="caret"></span>
+				    	{$location}  <span class="caret"></span>
 				    </a>
 				    <ul class="dropdown-menu" role="menu">
-				      <li><a href="#beijing" role="tab" data-toggle="tab">北京</a></li>
-				      <li><a href="#nanjing" role="tab" data-toggle="tab">南京</a></li>
-				      <li><a href="#shanghai" role="tab" data-toggle="tab">上海</a></li>
+				      <volist name="province" id="province">
+				      	<li><a href="javascript:;" role="tab" data-toggle="tab" class="pro_a">{$province.name}</a></li>
+				      </volist>
 				    </ul>
 				  </li>
 				</ul>
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="xuzhou" >
-						<label id="label" >区域
-							<a class="btn active" href="">全徐州</a>
-							<a class="btn" href="">铜山</a>	
-							<a class="btn" href="">泉山</a>	
-							<a class="btn" href="">贾汪</a>	
+					<div role="tabpanel" class="tab-pane fade in active" >
+						<label id="label" >城市
+							<volist name="city" id="city">
+								<a class="btn" href="javascript:;" class="city_a">{$city.name}</a>
+							</volist>
+						</label>
+						<br />
+						<label id="label" >地区
+							<volist name="county" id="county">
+								<a class="btn" href="javascript:;" class="county_a">{$county.name}</a>
+								<if condition="$i eq 10 ">
+									<br><for start="1" end="10">&nbsp;</for>
+								</if>
+							</volist>
 						</label>
 						<br />
 						<label>租金

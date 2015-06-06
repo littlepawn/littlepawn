@@ -39,6 +39,9 @@
     	.house-info{
 			margin: 20px auto;
 		}
+		#reg{
+    		margin-left: 20px;
+    	}
     </style>
   </head>
   <body>
@@ -51,7 +54,8 @@
 		      		</a>
 		      	</div>
 		      	<div class="col-md-2">
-		      		<button type="button" class="btn btn-info navbar-btn navbar-right" id="login">登录</button>
+		      		<input id="login" type="button" class="btn btn-info navbar-btn navbar-left" value="登录">
+		      		<input id="reg" type="button" class="btn btn-info navbar-btn navbar-middle" value="注册">
 		      	</div>
 		    </div>
 		  </div>

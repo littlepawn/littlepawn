@@ -77,10 +77,20 @@
 				  </li>
 				</ul>
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="xuzhou" >
-						<label id="label" >区域
-							<a class="btn active" href="javascript:;" class="city_a"></a>
-							<a class="btn" href="javascript:;"></a>	
+					<div role="tabpanel" class="tab-pane fade in active">
+						<label id="label" >城市
+							<volist name="city" id="city">
+								<a class="btn" href="javascript:;" class="city_a">{$city.name}</a>
+							</volist>
+						</label>
+						<br />
+						<label id="label" >地区
+							<volist name="county" id="county">
+								<a class="btn" href="javascript:;" class="county_a">{$county.name}</a>
+								<if condition="$i eq 10 ">
+									<br><for start="1" end="10">&nbsp;</for>
+								</if>
+							</volist>
 						</label>
 						<br />
 						<label>租金
