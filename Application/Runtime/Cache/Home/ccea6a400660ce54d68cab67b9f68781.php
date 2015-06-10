@@ -35,15 +35,18 @@
     			</div>
   			</div>
   			<div class="col-md-4 col-md-offset-1">
-  				<form role="form" method="post" action="/index.php/Home/Index/checklogin">
+  				<form role="form" method="post" onsubmit="return check()" action="/index.php/Home/Index/checklogin" >
   					<h2>登录</h2>
   					<div class="form-group has-feedback" id="demail">
  					   <label for="InputEmail">邮箱</label>
    					   <input type="text" class="form-control"  id="InputEmail" placeholder="Enter email" name="email">
+   					   <span class="help-block" style="display: none;" id="pwarning">邮箱格式错误</span>
+   					   <span class="help-block" style="display: none;" id="pwarning1">邮箱不能为空</span>
   					</div>
   					<div class="form-group">
    					   <label for="Password">密码</label>
 			  		   <input type="password" class="form-control" id="InputPassword" placeholder="Enter Password" name="password">
+			  		   <span class="help-block" style="display: none;" id="password1">密码不能为空</span>
 			  		</div>
 					<div class="checkbox">
  						<label>
@@ -68,10 +71,82 @@
   	</div>	
   </body>
   <script type="text/javascript">
+  		var input1=document.getElementById("InputEmail");
+		var input2=document.getElementById("InputPassword");
+		var re= /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
 		$(document).ready(function(){
+			function check(){
+				if(input1.value==""){
+					$("#demail").addClass("has-warning");
+					document.getElementById("pwarning1").style.display="block";
+					return false;
+				}else if(!re.test(input1.value)){
+					$("#demail").addClass("has-warning");
+					document.getElementById("pwarning").style.display="block";
+					return false;
+				}else if(input2.value==""){
+					$("#demail").addClass("has-warning");
+					document.getElementById("password1").style.display="block";
+					return false;
+				}else{
+					$("#demail").removeClass("has-warning");
+					document.getElementById("pwarning").style.display="none";
+					document.getElementById("pwarning1").style.display="none";
+					document.getElementById("password1").style.display="none";
+					return true;
+				}
+			};
 			$("#reg").click(function(){
 				window.location.href="/index.php/Home/Index/register";
 			});
+			input1.onfocus=function(){
+				$("#demail").removeClass("has-warning");
+				document.getElementById("pwarning").style.display="none";
+				document.getElementById("pwarning1").style.display="none";
+			}
+			
+			input1.onblur=function(){
+				if(input1.value!=""){
+					if(!re.test(input1.value)){
+						$("#demail").addClass("has-warning");
+						document.getElementById("pwarning").style.display="block";
+					}else if(re.test(input1.value)){
+						$("#demail").removeClass("has-warning");
+						document.getElementById("pwarning").style.display="none";
+					}else{
+						$("#demail").removeClass("has-warning");
+						document.getElementById("pwarning").style.display="none";
+						document.getElementById("pwarning1").style.display="none";
+					}
+				}
+			}
+			
+			input2.onfocus=function(){
+				if(input1.value==""){
+					document.getElementById("pwarning").style.display="none";
+					$("#demail").addClass("has-warning");
+					document.getElementById("pwarning1").style.display="block";
+				}else{
+					if(!re.test(input1.value)){
+						$("#demail").addClass("has-warning");
+						document.getElementById("pwarning").style.display="block";
+					}else{
+						$("#demail").removeClass("has-warning");
+						document.getElementById("pwarning").style.display="none";
+						document.getElementById("pwarning1").style.display="none";
+					}
+				}
+			}
+			
+			input2.onblur=function(){
+				if(input2.value==""){
+					$("#demail").removeClass("has-warning");
+					document.getElementById("pwarning").style.display="none";
+					document.getElementById("pwarning1").style.display="none";
+					document.getElementById("password1").style.display="none";
+				}
+			}
+
 		});
   </script>
 </html>

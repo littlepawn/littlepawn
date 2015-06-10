@@ -66,7 +66,7 @@
 			<div class="col-md-10">
 				    <ul class="nav nav-tabs">
 					    <li class="active">
-					    	<a href="">修改个人资料</a>
+					    	<a href="javascript:;">修改个人资料</a>
 					    </li>
 					</ul>
 					<div class="col-md-4" id="head-sculpture">
@@ -110,8 +110,11 @@
 							<div class="form-group">
 								 <label class="control-label col-md-2">性别</label>
 					   			 <div class="col-md-6">
-					    			  <input class="radio radio-inline" type="radio" value="男" name="sex">男
-					    			  <input class="radio radio-inline" type="radio" value="女" name="sex">女
+					   			 	  <?php if($sex == '男'): ?><input class="radio radio-inline" type="radio" value="男" name="sex" checked="checked">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex">女
+						    		  <?php else: ?>
+						    		  	  <input class="radio radio-inline" type="radio" value="男" name="sex">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex" checked="checked">女<?php endif; ?>
 					   			 </div>
 							</div>
 							
@@ -119,33 +122,20 @@
 								<label for="inputBirth" class="col-md-2 control-label">所在城市</label>
 								<div class="col-md-4">
 									<select name="province" class="form-control">
-										<option value="江苏">江苏省</option>
-										<option>浙江省</option>
-										<option>广东省</option>
+										<option value="<?php echo ($province); ?>" selected = "selected" ><?php echo ($province); ?></option>
+										<?php if(is_array($dprovince)): $i = 0; $__LIST__ = $dprovince;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dprovince): $mod = ($i % 2 );++$i;?><option value="<?php echo ($dprovince["name"]); ?>"><?php echo ($dprovince["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 									</select>
 								</div>
 								<div class="col-md-2">
 									<select name="city" class="form-control">
-										<option value="徐州">徐州</option>
-										<option>南京</option>
-										<option>苏州</option>
-										<option>无锡</option>
-										<option>南通</option>
-										<option>扬州</option>
-										<option>泰州</option>
-										<option>镇江</option>
-										<option>常州</option>
-										<option>盐城</option>
-										<option>淮安</option>
-										<option>宿迁</option>
-										<option>连云港</option>
+										<option value="<?php echo ($city); ?>" selected = "selected" ><?php echo ($city); ?></option>
+										<?php if(is_array($dcity)): $i = 0; $__LIST__ = $dcity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dcity): $mod = ($i % 2 );++$i;?><option value="<?php echo ($dcity["name"]); ?>"><?php echo ($dcity["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 									</select>
 								</div>
 								<div class="col-md-2">
 									<select name="area" class="form-control">
-										<option value="铜山">铜山</option>
-										<option>泉山</option>
-										<option>贾汪</option>
+										<option value="<?php echo ($area); ?>" selected = "selected" ><?php echo ($area); ?></option>
+										<?php if(is_array($county)): $i = 0; $__LIST__ = $county;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$county): $mod = ($i % 2 );++$i;?><option value="<?php echo ($county["name"]); ?>"><?php echo ($county["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 									</select>
 								</div>
 							</div>

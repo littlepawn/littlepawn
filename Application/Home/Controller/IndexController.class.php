@@ -8,15 +8,17 @@ class IndexController extends Controller {
     	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
     	$location = $Ip->getlocation();
     	$region=$location['country'];
+    	$region=substr($region, 0,9);
     	$Province=M("Province");
     	if($Province->where("name='$region'")->find()<1){
-    		$region="上海市";
+    		$region="江苏省";
     	}
     	$this->assign("location",$region);
     	$province=$Province->select();
     	$this->assign("province",$province);
     	$City=M("City");
-    	$provincecode=$province['0']['code'];
+    	$p=$Province->where("name='$region'")->field("code")->select();
+    	$provincecode=$p['0']['code'];
     	$city=$City->where("provincecode='$provincecode'")->select();
     	$Area=M("Area");
     	$citycode=$city['0']['code'];
@@ -55,21 +57,19 @@ class IndexController extends Controller {
     	}
     }   
         
-    public function region(){
+    public function city(){
+    	$provincename=$_POST['provincename'];
     	$Province=M("Province");
-    	if(IS_POST){
-    		$pname=$_GET['province'];
-    		$province=$Province->where("name=$pname")->select();
-    		$provincecode=$province['0']['code'];
-    		$City=M("City");
-    		$city=$City->where("provincecode='$provincecode'")->select();
-    		$citycode=$city['0']['code'];
-    		$Area=M("Area");
-    		$area=$Area->where("citycode='$citycode'")->select();
-    		$this->ajaxReturn($region);
-    	}else{
-    		
+    	$code=$Province->field("code")->where("name='$provincename'")->select();
+    	$provincecode=$code['0']['code'];
+    	$City=M("City");
+    	$c=$City->where("provincecode='$provincecode'")->select();
+    	$data=array();
+    	for($i=0;$i<count($c);$i++){
+    		$data['city'][]=$c[$i]['name'];
     	}
+    	$data['province']=$provincename;
+    	$this->ajaxReturn($data);
     }
     
     public function wantedindex(){
@@ -77,15 +77,17 @@ class IndexController extends Controller {
     	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
     	$location = $Ip->getlocation();
     	$region=$location['country'];
+    	$region=substr($region, 0,9);
     	$Province=M("Province");
     	if($Province->where("name='$region'")->find()<1){
-    		$region="上海市";
+    		$region="江苏省";
     	}
     	$this->assign("location",$region);
     	$province=$Province->select();
     	$this->assign("province",$province);
     	$City=M("City");
-    	$provincecode=$province['0']['code'];
+    	$p=$Province->where("name='$region'")->field("code")->select();
+    	$provincecode=$p['0']['code'];
     	$city=$City->where("provincecode='$provincecode'")->select();
     	$Area=M("Area");
     	$citycode=$city['0']['code'];
@@ -133,24 +135,26 @@ class IndexController extends Controller {
 			$this->assign('name',$_SESSION['user']["name"]);
 			
 			import('ORG.Net.IpLocation');
-			$Ip = new \Org\Net\IpLocation('UTFWry.dat');
-			$location = $Ip->getlocation();
-			$region=$location['country'];
-			$Province=M("Province");
-			if($Province->where("name='$region'")->find()<1){
-				$region="上海市";
-			}
-			$this->assign("location",$region);
-			$province=$Province->select();
-			$this->assign("province",$province);
-			$City=M("City");
-			$provincecode=$province['0']['code'];
-			$city=$City->where("provincecode='$provincecode'")->select();
-			$Area=M("Area");
-			$citycode=$city['0']['code'];
-			$county=$Area->where("citycode='$citycode'")->select();
-			$this->assign("city",$city);
-			$this->assign("county",$county);
+	    	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+	    	$location = $Ip->getlocation();
+	    	$region=$location['country'];
+	    	$region=substr($region, 0,9);
+	    	$Province=M("Province");
+	    	if($Province->where("name='$region'")->find()<1){
+	    		$region="江苏省";
+	    	}
+	    	$this->assign("location",$region);
+	    	$province=$Province->select();
+	    	$this->assign("province",$province);
+	    	$City=M("City");
+	    	$p=$Province->where("name='$region'")->field("code")->select();
+	    	$provincecode=$p['0']['code'];
+	    	$city=$City->where("provincecode='$provincecode'")->select();
+	    	$Area=M("Area");
+	    	$citycode=$city['0']['code'];
+	    	$county=$Area->where("citycode='$citycode'")->select();
+	    	$this->assign("city",$city);
+	    	$this->assign("county",$county);
 			
 	    	$pagesize=2;
 	    	$house=M('House');
@@ -191,24 +195,26 @@ class IndexController extends Controller {
     		$this->assign('name',$_SESSION['user']["name"]);
     		
     		import('ORG.Net.IpLocation');
-    		$Ip = new \Org\Net\IpLocation('UTFWry.dat');
-    		$location = $Ip->getlocation();
-    		$region=$location['country'];
-    		$Province=M("Province");
-    		if($Province->where("name='$region'")->find()<1){
-    			$region="上海市";
-    		}
-    		$this->assign("location",$region);
-    		$province=$Province->select();
-    		$this->assign("province",$province);
-    		$City=M("City");
-    		$provincecode=$province['0']['code'];
-    		$city=$City->where("provincecode='$provincecode'")->select();
-    		$Area=M("Area");
-    		$citycode=$city['0']['code'];
-    		$county=$Area->where("citycode='$citycode'")->select();
-    		$this->assign("city",$city);
-    		$this->assign("county",$county);
+	    	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+	    	$location = $Ip->getlocation();
+	    	$region=$location['country'];
+	    	$region=substr($region, 0,9);
+	    	$Province=M("Province");
+	    	if($Province->where("name='$region'")->find()<1){
+	    		$region="江苏省";
+	    	}
+	    	$this->assign("location",$region);
+	    	$province=$Province->select();
+	    	$this->assign("province",$province);
+	    	$City=M("City");
+	    	$p=$Province->where("name='$region'")->field("code")->select();
+	    	$provincecode=$p['0']['code'];
+	    	$city=$City->where("provincecode='$provincecode'")->select();
+	    	$Area=M("Area");
+	    	$citycode=$city['0']['code'];
+	    	$county=$Area->where("citycode='$citycode'")->select();
+	    	$this->assign("city",$city);
+	    	$this->assign("county",$county);
     		
     		$pagesize=2;
     		$house=M('Wantedhouse');
@@ -247,7 +253,7 @@ class IndexController extends Controller {
     public function checklogin(){
     	if(!empty($_POST['email'])&&!empty($_POST['password'])){
     		$User=M("User");
-    		$email=$_POST['email'];
+    		$email=trim($_POST['email']);
     		$password=md5($_POST['password']);
     		if($User->where("email='$email'"." AND"." password='$password'")->find()>0){
     			$data=$User->where("email='$email'")->field()->select();
@@ -309,6 +315,11 @@ class IndexController extends Controller {
     		}else{
     			$this->assign('phone',$_SESSION['user']["phone"]);
     		}
+    		if(!$_SESSION['user']['sex']){
+    			$this->assign('sex',"男");
+    		}else{
+    			$this->assign('sex',$_SESSION['user']['sex']);
+    		}
     		if(!$_SESSION['user']["address"]){
     			$this->assign('province',"");
     			$this->assign('city',"");
@@ -331,14 +342,35 @@ class IndexController extends Controller {
     		}else{
     			$this->assign('phone',$_SESSION['user']["phone"]);
     		}
-    		if(!$_SESSION['user']["address"]){
-    			$this->assign('province',"");
-    			$this->assign('city',"");
-    			$this->assign('area',"");
+    		if(!$_SESSION['user']['sex']){
+    			$this->assign('sex',"男");
     		}else{
-    			$this->assign('province',$_SESSION['user']['address']);
-    			$this->assign('city',$_SESSION['user']['address']);
-    			$this->assign('area',$_SESSION['user']['address']);
+    			$this->assign('sex',$_SESSION['user']['sex']);
+    		}
+    		if(!$_SESSION['user']["address"]){
+    			import('ORG.Net.IpLocation');
+    			$Ip = new \Org\Net\IpLocation('UTFWry.dat');
+    			$location = $Ip->getlocation();
+    			$region=$location['country'];
+    			$Province=M("Province");
+    			if($Province->where("name='$region'")->find()<1){
+    				$region="江苏省";
+    			}
+    			$province=$Province->where("name='$region")->select();
+    			$p=$Province->select();
+    			$this->assign("dprovince",$p);
+    			$City=M("City");
+    			$provincecode=$province['0']['code'];
+    			$city=$City->where("provincecode='$provincecode'")->select();
+    			$Area=M("Area");
+    			$citycode=$city['0']['code'];
+    			$county=$Area->where("citycode='$citycode'")->select();
+    			$this->assign("dcity",$city);
+    			$this->assign("county",$county);
+    		}else{
+    			$this->assign('province',$_SESSION['user']['address']['province']);
+    			$this->assign('city',$_SESSION['user']['address']['city']);
+    			$this->assign('area',$_SESSION['user']['address']['area']);
     		}
     		$this->display();
     	}
@@ -691,6 +723,31 @@ class IndexController extends Controller {
     
     public function findpwd1(){
     	$this->display();
+    }
+    
+    public function checkphone(){
+    	if(IS_POST){
+    		if(!empty($_POST['password'])&&!empty($_POST['phone'])){
+    			$user=M("User");
+    			$pwd=md5($_POST['password']);
+    			$name=$_SESSION['user']['name'];
+    			if($user->where("password='$pwd'")->find()>0){
+    				$data['phone']=$_POST['phone'];
+    				if($user->where("name='$name'")->save($data)){
+    					$_SESSION['user']['phone']=$_POST['phone'];
+    					$this->redirect("userinfo");
+    				}else {
+    					$this->error("修改失败","userinfo");
+    				}
+    			}else{
+    				$this->error("修改失败","userinfo");
+    			}
+    		}else{
+    			$this->error("修改失败","userinfo");
+    		}
+    	}else {
+    		$this->error("修改失败","userinfo");
+    	}
     }
 }
 

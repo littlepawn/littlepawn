@@ -116,7 +116,7 @@
   				<nav>
 				  <ul class="pagination">
 				    <li><a href="/index.php/Home/Index/houserentinfo/pagenow/1">&laquo;</a></li>
-			    	<?php $__FOR_START_23875__=1;$__FOR_END_23875__=$pagecount+1;for($i=$__FOR_START_23875__;$i < $__FOR_END_23875__;$i+=1){ ?><li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    	<?php $__FOR_START_32458__=1;$__FOR_END_32458__=$pagecount+1;for($i=$__FOR_START_32458__;$i < $__FOR_END_32458__;$i+=1){ ?><li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			   		<li><a href="/index.php/Home/Index/houserentinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>

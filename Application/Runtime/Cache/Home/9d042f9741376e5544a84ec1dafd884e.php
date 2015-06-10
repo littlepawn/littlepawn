@@ -101,8 +101,11 @@
 							<div class="form-group">
 								 <label class="control-label col-md-2">性别</label>
 					   			 <div class="col-md-6">
-					    			  <input class="radio radio-inline" type="radio" value="option1" name="sex" checked="checked" disabled="disabled">男
-					    			  <input class="radio radio-inline" type="radio" value="option1" name="sex" disabled="disabled">女
+									  <?php if($sex == '男'): ?><input class="radio radio-inline" type="radio" value="男" name="sex" checked="checked" disabled="disabled">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex" disabled="disabled">女
+						    		  <?php else: ?>
+						    		  	  <input class="radio radio-inline" type="radio" value="男" name="sex" disabled="disabled">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex" checked="checked" disabled="disabled">女<?php endif; ?>
 					   			 </div>
 							</div>
 							

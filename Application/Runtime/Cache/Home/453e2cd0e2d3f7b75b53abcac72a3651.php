@@ -108,7 +108,7 @@
   				<nav>
 				  <ul class="pagination">
 				    <li><a href="/index.php/Home/Index/wantedinfo/pagenow/1">&laquo;</a></li>
-			    	<?php $__FOR_START_20416__=1;$__FOR_END_20416__=$pagecount+1;for($i=$__FOR_START_20416__;$i < $__FOR_END_20416__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    	<?php $__FOR_START_15644__=1;$__FOR_END_15644__=$pagecount+1;for($i=$__FOR_START_15644__;$i < $__FOR_END_15644__;$i+=1){ ?><li><a href="/index.php/Home/Index/wantedinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			   		<li><a href="/index.php/Home/Index/wantedinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>

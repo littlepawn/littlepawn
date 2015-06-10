@@ -25,7 +25,7 @@
 	  <div class="container">
 	    <div class="row">
 	    	<div class="col-md-10">
-	      		<a class="navbar-brand" href="#">
+	      		<a class="navbar-brand" href="/index.php/Home/Index/main">
 	        		<p>房产信息管理</p>
 	      		</a>
 	      	</div>
@@ -61,21 +61,21 @@
 						    		<div class="form-group">
 						    			<label class="control-label col-md-3">当前密码</label>
 						    			<div class="col-md-6">
-						    				<input class="form-control" type="password" />
+						    				<input class="form-control" type="password" name="password"/>
 						    			</div>
 						    		</div>
 						    		
 						    		<div class="form-group">
 						    			<label class="control-label col-md-3">新手机号</label>
 						    			<div class="col-md-6">
-						    				<input class="form-control" type="text" />
+						    				<input class="form-control" type="text" name="phone"/>
 						    			</div>
 						    		</div>
 						    		
 						    		<div class="form-group">
 						    			<div class="col-md-3"></div>
 						    			<div class="col-md-3">
-						    				<input type="submit" class="btn btn-primary btn-block" value="提价">
+						    				<input type="submit" class="btn btn-primary btn-block" value="提交">
 						    			</div>
 						    		</div>
 						    	</div>

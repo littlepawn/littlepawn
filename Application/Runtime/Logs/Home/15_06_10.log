@@ -1,0 +1,1789 @@
+[ 2015-06-10T11:27:40+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.103006s ]
+
+[ 2015-06-10T11:27:54+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: c D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 70 行.
+
+[ 2015-06-10T11:27:59+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: c D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 70 行.
+
+[ 2015-06-10T11:30:05+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-06-10T11:30:09+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='吉林省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 70 行.
+
+[ 2015-06-10T11:31:16+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:31:20+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0070s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0080s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T11:31:42+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:31:44+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T11:31:53+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T11:34:10+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:34:12+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='湖北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+
+[ 2015-06-10T11:35:44+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:35:47+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='湖南省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+
+[ 2015-06-10T11:36:04+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='重庆市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 67 行.
+
+[ 2015-06-10T11:36:45+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:36:47+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 62 行.
+
+[ 2015-06-10T11:38:54+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:38:56+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 62 行.
+
+[ 2015-06-10T11:38:56+08:00 ] 127.0.0.1 /index.php/Home/Index/fault.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: error D:\WEB\littlepawn\Application\Runtime\Cache\Home\96e3b35b800dc6efcd39b5a5a7471022.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:39:22+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:39:24+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:39:24+08:00 ] 127.0.0.1 /index.php/Home/Index/fault.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: error D:\WEB\littlepawn\Application\Runtime\Cache\Home\96e3b35b800dc6efcd39b5a5a7471022.php 第 8 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:40:18+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:40:20+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:41:13+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T11:41:15+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0080s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='贵州省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 65 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T11:42:38+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:42:41+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T11:44:11+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:44:12+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:44:13+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河南省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 66 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T11:44:52+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:44:54+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T11:44:56+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江西省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 66 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 68 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 68 行.
+
+[ 2015-06-10T15:55:29+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035002s ]
+
+[ 2015-06-10T15:55:34+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T15:57:26+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T15:57:29+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0060s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 66 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T15:57:36+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='安徽省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+NOTIC: [8] Array to string conversion D:\WEB\littlepawn\Application\Home\Controller\IndexController.class.php 第 66 行.
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='Array' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T15:58:47+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T15:58:52+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:00:39+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:00:41+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:02:22+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:02:24+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='贵州省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='520000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:05:19+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:05:23+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江西省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='360000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:05:38+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='安徽省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='340000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:05:45+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:06:29+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:06:35+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:07:48+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:07:52+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:11:53+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:11:57+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:14:05+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:14:10+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:14:34+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:14:36+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:14:38+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:14:40+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:14:43+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='广东省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='440000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:20:30+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:20:32+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:21:08+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:21:12+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:21:16+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='辽宁省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='210000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:24:03+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:24:06+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='辽宁省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='210000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:25:18+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:25:22+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:26:04+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:26:26+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:26:27+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:26:34+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:27:10+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:27:11+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:27:19+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:28:29+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:28:30+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:28:35+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:31:05+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:31:08+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:31:12+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:31:16+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:32:37+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:32:43+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='辽宁省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='210000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:33:02+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:33:05+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:33:15+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:33:17+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='辽宁省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='210000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:35:58+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:36:00+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:36:16+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:36:19+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='330000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:36:23+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='安徽省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='340000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:36:55+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:36:57+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='吉林省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='220000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:37:02+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:37:59+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='330000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:03+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='上海市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='310000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:08+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:11+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:20+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:22+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:24+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:28+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='上海市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='310000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:30+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:33+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:37+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='上海市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='310000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:39+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='330000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:41+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='360000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:44+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='青海省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='630000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:38:48+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='宁  夏' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='640000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:38:53+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='新  疆' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='650000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:41:31+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-10T16:41:32+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:41:39+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='330000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:41:42+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='360000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:43:01+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:43:02+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:43:05+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='安徽省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='340000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:43:11+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='新  疆' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='650000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:43:12+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='新  疆' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='650000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:44:59+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:45:21+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:48:59+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:49:05+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='新  疆' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='650000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:49:16+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:49:23+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:49:54+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:49:55+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:49:58+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:50:34+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:50:37+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:51:27+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:51:29+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0070s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:51:31+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:51:33+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0070s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='上海市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='310000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:51:36+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:51:41+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='新  疆' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='650000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:51:55+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:51:58+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:52:47+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:52:51+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='河北省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='130000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:52:53+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='江苏省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='320000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:52:56+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='浙江省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='330000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:52:57+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='辽宁省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='210000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:52:59+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:53:00+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:53:03+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='黑龙江' )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='230000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:53:05+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='吉林省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='220000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:53:09+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:53:13+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0050s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:56:09+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:56:11+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:56:17+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:56:42+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T16:56:45+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:56:48+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:56:52+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='吉林省' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='220000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:56:54+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:57:11+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T16:57:14+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:57:19+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0030s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:57:23+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='北京市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='110000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:57:25+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='山西省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='140000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T16:57:47+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='上海市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='310000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T16:57:54+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='重庆市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='500000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T17:00:10+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T17:00:13+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='天津市' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='120000' )  [ RunTime:0.0010s ]
+
+[ 2015-06-10T17:00:16+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='吉林省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='220000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T17:00:20+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0040s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='福建省' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='350000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T20:54:54+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:54:58+08:00 ] 127.0.0.1 /index.php/Home/Index/city
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_province` [ RunTime:0.0110s ]
+SQL: SELECT `code` FROM `think_province` WHERE ( name='内蒙古' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_city` WHERE ( provincecode='150000' )  [ RunTime:0.0000s ]
+
+[ 2015-06-10T20:55:16+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T20:55:17+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:18+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T20:55:18+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:19+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:20+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T20:55:31+08:00 ] 127.0.0.1 /index.php/Home/Index/index/pagenow/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T20:55:33+08:00 ] 127.0.0.1 /index.php/Home/Index/index/pagenow/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-10T20:55:38+08:00 ] 127.0.0.1 /index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:42+08:00 ] 127.0.0.1 /index.php/Home/Index/checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:42+08:00 ] 127.0.0.1 /index.php/Home/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-10T20:55:48+08:00 ] 127.0.0.1 /index.php/Home/Index/houserentinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+

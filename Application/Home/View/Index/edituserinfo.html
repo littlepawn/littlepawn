@@ -110,8 +110,13 @@
 							<div class="form-group">
 								 <label class="control-label col-md-2">性别</label>
 					   			 <div class="col-md-6">
-					    			  <input class="radio radio-inline" type="radio" value="男" name="sex">男
-					    			  <input class="radio radio-inline" type="radio" value="女" name="sex">女
+					   			 	  <if condition="$sex eq '男'">
+						    			  <input class="radio radio-inline" type="radio" value="男" name="sex" checked="checked">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex">女
+						    		  <else/>
+						    		  	  <input class="radio radio-inline" type="radio" value="男" name="sex">男
+						    			  <input class="radio radio-inline" type="radio" value="女" name="sex" checked="checked">女
+						    		  </if>
 					   			 </div>
 							</div>
 							
@@ -119,33 +124,26 @@
 								<label for="inputBirth" class="col-md-2 control-label">所在城市</label>
 								<div class="col-md-4">
 									<select name="province" class="form-control">
-										<option value="江苏">江苏省</option>
-										<option>浙江省</option>
-										<option>广东省</option>
+										<option value="{$province}" selected = "selected" >{$province}</option>
+										<volist name="dprovince" id="dprovince">
+											<option value="{$dprovince.name}">{$dprovince.name}</option>
+										</volist>
 									</select>
 								</div>
 								<div class="col-md-2">
 									<select name="city" class="form-control">
-										<option value="徐州">徐州</option>
-										<option>南京</option>
-										<option>苏州</option>
-										<option>无锡</option>
-										<option>南通</option>
-										<option>扬州</option>
-										<option>泰州</option>
-										<option>镇江</option>
-										<option>常州</option>
-										<option>盐城</option>
-										<option>淮安</option>
-										<option>宿迁</option>
-										<option>连云港</option>
+										<option value="{$city}" selected = "selected" >{$city}</option>
+										<volist name="dcity" id="dcity">
+											<option value="{$dcity.name}">{$dcity.name}</option>
+										</volist>
 									</select>
 								</div>
 								<div class="col-md-2">
 									<select name="area" class="form-control">
-										<option value="铜山">铜山</option>
-										<option>泉山</option>
-										<option>贾汪</option>
+										<option value="{$area}" selected = "selected" >{$area}</option>
+										<volist name="county" id="county">
+											<option value="{$county.name}">{$county.name}</option>
+										</volist>
 									</select>
 								</div>
 							</div>

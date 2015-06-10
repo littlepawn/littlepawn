@@ -69,7 +69,7 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-10"  id="location-info">
 				<ul class="nav nav-tabs" role="tablist" id="mytab">
-				  <li role="presentation" class="dropdown">
+				  <li role="presentation" class="dropdown active">
 				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 				    	<?php echo ($location); ?>  <span class="caret"></span>
 				    </a>
@@ -80,13 +80,14 @@
 				</ul>
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active">
-						<label id="label" >城市
-							<?php if(is_array($city)): $i = 0; $__LIST__ = $city;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$city): $mod = ($i % 2 );++$i;?><a class="btn" href="javascript:;" class="city_a"><?php echo ($city["name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-						</label>
+						<?php if(($location != '上海市') OR ($location != '北京市') OR ($location != '天津市') OR ($location != '重庆市')): ?><label id="label" >城市
+								<?php if(is_array($city)): $i = 0; $__LIST__ = $city;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$city): $mod = ($i % 2 );++$i;?><a class="btn" href="javascript:;" class="city_a"><?php echo ($city["name"]); ?></a>
+									<?php if($i == 12 ): ?><br><?php $__FOR_START_10527__=1;$__FOR_END_10527__=10;for($i=$__FOR_START_10527__;$i < $__FOR_END_10527__;$i+=1){ ?>&nbsp;<?php } endif; endforeach; endif; else: echo "" ;endif; ?>
+							</label><?php endif; ?>
 						<br />
 						<label id="label" >地区
 							<?php if(is_array($county)): $i = 0; $__LIST__ = $county;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$county): $mod = ($i % 2 );++$i;?><a class="btn" href="javascript:;" class="county_a"><?php echo ($county["name"]); ?></a>
-								<?php if($i == 10 ): ?><br><?php $__FOR_START_18694__=1;$__FOR_END_18694__=10;for($i=$__FOR_START_18694__;$i < $__FOR_END_18694__;$i+=1){ ?>&nbsp;<?php } endif; endforeach; endif; else: echo "" ;endif; ?>
+								<?php if($i == 12 ): ?><br><?php $__FOR_START_9324__=1;$__FOR_END_9324__=10;for($i=$__FOR_START_9324__;$i < $__FOR_END_9324__;$i+=1){ ?>&nbsp;<?php } endif; endforeach; endif; else: echo "" ;endif; ?>
 						</label>
 						<br />
 						<label>租金
@@ -211,7 +212,7 @@
 			<nav>
 			  <ul class="pagination">
 			    <li><a href="/index.php/Home/Index/main/pagenow/1">&laquo;</a></li>
-			    <?php $__FOR_START_7111__=1;$__FOR_END_7111__=$pagecount+1;for($i=$__FOR_START_7111__;$i < $__FOR_END_7111__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    <?php $__FOR_START_6709__=1;$__FOR_END_6709__=$pagecount+1;for($i=$__FOR_START_6709__;$i < $__FOR_END_6709__;$i+=1){ ?><li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			    <li><a href="/index.php/Home/Index/main/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 			  </ul>
 			</nav>

@@ -76,7 +76,7 @@
 			<div class="col-md-10">
 				<ul class="nav nav-tabs">
 					    <li class="active" id="publish">
-					    	<a href="">发布信息</a>
+					    	<a href="javascript:;">发布信息</a>
 					    </li>
 				</ul>
 				<div class="col-md-2">
@@ -122,7 +122,7 @@
   				<nav>
 				  <ul class="pagination">
 					    <li><a href="/index.php/Home/Index/editwantedinfo/pagenow/1">&laquo;</a></li>
-			    	<?php $__FOR_START_13034__=1;$__FOR_END_13034__=$pagecount+1;for($i=$__FOR_START_13034__;$i < $__FOR_END_13034__;$i+=1){ ?><li><a href="/index.php/Home/Index/editwantedinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
+			    	<?php $__FOR_START_15653__=1;$__FOR_END_15653__=$pagecount+1;for($i=$__FOR_START_15653__;$i < $__FOR_END_15653__;$i+=1){ ?><li><a href="/index.php/Home/Index/editwantedinfo/pagenow/<?php echo ($i); ?>"><?php echo ($i); ?></a></li><?php } ?>
 			   		<li><a href="/index.php/Home/Index/editwantedinfo/pagenow/<?php echo ($pagecount); ?>">&raquo;</a></li>
 				  </ul>
 				</nav>
