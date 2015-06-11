@@ -68,123 +68,66 @@
 		</div>
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10"  id="location-info">
+		<div class="col-md-10"  id="location-info">
 				<ul class="nav nav-tabs" role="tablist" id="mytab">
+				  <!-- <li role="presentation" class="active"><a href="#xuzhou" role="tab" data-toggle="tab">徐州</a></li>-->
 				  <li role="presentation" class="dropdown active">
-				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				    	{$location}  <span class="caret"></span>
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="pname">
+				    	{$location} <span class="caret"></span>
 				    </a>
 				    <ul class="dropdown-menu" role="menu">
 				      <volist name="province" id="province">
-				      	<li><a href="javascript:;" role="tab" data-toggle="tab" class="pro_a">{$province.name}</a></li>
+				      		<li><a href="javascript:;" role="tab" data-toggle="tab" class="pro_a">{$province.name}</a></li>
 				      </volist>
 				    </ul>
 				  </li>
 				</ul>
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" >
+					<div role="tabpanel" class="tab-pane fade in active">
 						<if condition="($location neq '上海市') OR ($location neq '北京市') OR ($location neq '天津市') OR ($location neq '重庆市')">
-							<label id="label" >城市
+							<label id="clabel" >城市
 								<volist name="city" id="city">
-									<a class="btn" href="javascript:;" class="city_a">{$city.name}</a>
-									<if condition="$i eq 12 ">
+									<if condition="$i eq 1">
+										<a class="btn city_a active" href="javascript:;">{$city.name}</a>
+									<else/>
+										<a class="btn city_a" href="javascript:;">{$city.name}</a>
+									</if>
+									<if condition="$i eq 8 ">
 										<br><for start="1" end="10">&nbsp;</for>
 									</if>
 								</volist>
 							</label>
 						</if>
 						<br />
-						<label id="label" >地区
+						<label id="alabel" >地区
 							<volist name="county" id="county">
-								<a class="btn" href="javascript:;" class="county_a">{$county.name}</a>
-								<if condition="$i eq 12 ">
+								<if condition="$i eq 1">
+										<a class="btn active area_a" href="javascript:;">{$county.name}</a>
+									<else/>
+										<a class="btn area_a" href="javascript:;">{$county.name}</a>
+									</if>
+								<if condition="$i eq 8 ">
 									<br><for start="1" end="10">&nbsp;</for>
 								</if>
 							</volist>
 						</label>
 						<br />
-						<label>租金
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">500以下</a>	
-							<a class="btn" href="">500-1000</a>	
-							<a class="btn" href="">1000以上</a>	
+						<label id="rlabel">租金&nbsp&nbsp
+							<a class="btn active rent" href="javascript:;">不限</a>
+							<a class="btn rent" href="javascript:;">500以下</a>	
+							<a class="btn rent" href="javascript:;">500-1000</a>	
+							<a class="btn rent" href="javascript:;">1000以上</a>
+							<a class="btn rent" href="javascript:;">1000-2000</a>
+							<a class="btn rent" href="javascript:;">2000-3000</a>
+							<a class="btn rent" href="javascript:;">13000以上</a>	
 						</label>
 						<br />
-						<label>厅室
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">一室</a>	
-							<a class="btn" href="">两室</a>	
-							<a class="btn" href="">三室</a>
-							<a class="btn" href="">三室以上</a>
-						</label>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="beijing">
-						<label id="label">区域
-							<a class="btn active" href="">全北京</a>
-							<a class="btn" href="">朝阳</a>	
-							<a class="btn" href="">东城</a>	
-							<a class="btn" href="">海淀</a>	
-						</label>
-						<br />
-						<label>租金
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">500以下</a>	
-							<a class="btn" href="">500-1000</a>	
-							<a class="btn" href="">1000以上</a>	
-						</label>
-						<br />
-						<label>厅室
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">一室</a>	
-							<a class="btn" href="">两室</a>	
-							<a class="btn" href="">三室</a>
-							<a class="btn" href="">三室以上</a>
-						</label>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="nanjing">
-						<label id="label">区域
-							<a class="btn active" href="">全南京</a>
-							<a class="btn" href="">玄武</a>	
-							<a class="btn" href="">鼓楼</a>	
-							<a class="btn" href="">秦淮</a>	
-						</label>
-						<br />
-						<label>租金
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">500以下</a>	
-							<a class="btn" href="">500-1000</a>	
-							<a class="btn" href="">1000以上</a>	
-						</label>
-						<br />
-						<label>厅室
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">一室</a>	
-							<a class="btn" href="">两室</a>	
-							<a class="btn" href="">三室</a>
-							<a class="btn" href="">三室以上</a>
-						</label>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="shanghai">
-						<label id="label">区域
-							<a class="btn active" href="">全上海</a>
-							<a class="btn" href="">浦东</a>	
-							<a class="btn" href="">黄浦</a>	
-							<a class="btn" href="">徐汇</a>	
-						</label>
-						<br />
-						<label>租金
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">500以下</a>	
-							<a class="btn" href="">500-1000</a>	
-							<a class="btn" href="">1000以上</a>	
-						</label>
-						<br />
-						<label>厅室
-							<a class="btn active" href="">不限</a>
-							<a class="btn" href="">一室</a>	
-							<a class="btn" href="">两室</a>	
-							<a class="btn" href="">三室</a>
-							<a class="btn" href="">三室以上</a>
+						<label id="tlabel">厅室&nbsp&nbsp
+							<a class="btn active type" href="javascript:;">不限</a>
+							<a class="btn type" href="javascript:;">一室</a>	
+							<a class="btn type" href="javascript:;">两室</a>	
+							<a class="btn type" href="javascript:;">三室</a>
+							<a class="btn type" href="javascript:;">三室以上</a>
 						</label>
 					</div>
 				</div>
@@ -228,4 +171,159 @@
 		<div class="col-md-2"></div>
 	</div>
 </body>
+<script type="text/javascript">
+	$(function(){
+		$(".pro_a").click(function(){
+			var name=$(this).html();
+			$.ajax({
+				  type: "POST",
+				  data:"provincename="+name,
+				  url: "__CONTROLLER__/city",
+				  dataType: "json",
+				  success:function (data) { 
+					  $("#pname").html(data.province+"<span class='caret'></span>");
+					  if(data.province!="天津市"&&data.province!="北京市"){
+						  $("#clabel").html("城市&nbsp&nbsp");
+						  for(var i=0;i<data.city.length;i++){
+							if(i==8){
+								$("#clabel").append("<br>");
+								for(var j=0;j<10;j++){
+									$("#clabel").append("<span>&nbsp</span>");
+								}
+							}
+							if(i==0){
+								$("#clabel").append("<a class='btn active city_a' href='javascript:;'>"+data.city[i]+"</a>");
+							}else{
+						  		$("#clabel").append("<a class='btn city_a' href='javascript:;'>"+data.city[i]+"</a>");
+							}
+						  }
+						  $(".city_a").click(cityClick);
+						  
+						  var cityname=$(".city_a").eq(0).html();
+						  $.ajax({
+					       	  type: "POST",
+							  data:"cityname="+cityname,
+							  url: "__CONTROLLER__/area",
+							  dataType: "json",
+							  success:function(county){
+								  //$(".city_a").eq(0).addClass("active");
+								  $("#alabel").html("地区&nbsp&nbsp");
+								  for(var i=0;i<county.area.length;i++){
+									if(i==8){
+										$("#alabel").append("<br>");
+										for(var j=0;j<10;j++){
+											$("#alabel").append("<span>&nbsp</span>");
+										}
+									}
+									if(i==16){
+										$("#alabel").append("<br>");
+										for(var j=0;j<10;j++){
+											$("#alabel").append("<span>&nbsp</span>");
+										}
+									}
+									if(i==0){
+										$("#alabel").append("<a class='btn active area_a' href='javascript:;'>"+county.area[i]+"</a>");
+									}else{
+								  		$("#alabel").append("<a class='btn area_a' href='javascript:;'>"+county.area[i]+"</a>");
+									}
+								  }
+							  }
+						  });
+						  
+					  }else{
+						  $("#clabel").html(""); 
+						  $.ajax({
+					       	  type: "POST",
+							  data:"cityname="+name,
+							  url: "__CONTROLLER__/area",
+							  dataType: "json",
+							  success:function(county){
+								  //$(".city_a").eq(0).addClass("active");
+								  $("#alabel").html("地区&nbsp&nbsp");
+								  for(var i=0;i<county.area.length;i++){
+									if(i==8){
+										$("#alabel").append("<br>");
+										for(var j=0;j<10;j++){
+											$("#alabel").append("<span>&nbsp</span>");
+										}
+									}
+									if(i==16){
+										$("#alabel").append("<br>");
+										for(var j=0;j<10;j++){
+											$("#alabel").append("<span>&nbsp</span>");
+										}
+									}
+									if(i==0){
+										$("#alabel").append("<a class='btn active area_a' href='javascript:;'>"+county.area[i]+"</a>");
+									}else{
+								  		$("#alabel").append("<a class='btn area_a' href='javascript:;'>"+county.area[i]+"</a>");
+									}
+								  }
+								  $(".area_a").click(areaClick);
+							  }
+						  });
+					  }
+					  
+					 
+				  }
+			});
+		});
+		
+		$(".city_a").click(cityClick);
+		function cityClick(){
+			var name=$(this).html();
+			$("#clabel .active").removeClass("active");
+			$(this).addClass("active");
+			$.ajax({
+				 type: "POST",
+				 data:"cityname="+name,
+				 url: "__CONTROLLER__/area",
+				 dataType: "json",
+				 success:function(county){
+					  $("#alabel").html("地区&nbsp&nbsp");
+					  for(var i=0;i<county.area.length;i++){
+						if(i==8){
+							$("#alabel").append("<br>");
+							for(var j=0;j<10;j++){
+								$("#alabel").append("<span>&nbsp</span>");
+							}
+						}
+						if(i==16){
+							$("#alabel").append("<br>");
+							for(var j=0;j<10;j++){
+								$("#alabel").append("<span>&nbsp</span>");
+							}
+						}
+						if(i==0){
+							$("#alabel").append("<a class='btn active area_a' href='javascript:;'>"+county.area[i]+"</a>");
+						}else{
+					  		$("#alabel").append("<a class='btn area_a' href='javascript:;'>"+county.area[i]+"</a>");
+						}
+					  }
+					  $(".area_a").click(areaClick);
+				 }
+			});
+		}
+		
+		$(".area_a").click(areaClick);
+		function areaClick(){
+			var name=$(this).html();
+			$("#alabel .active").removeClass("active");
+			$(this).addClass("active");
+		}
+		
+		$(".rent").click(function(){
+			var name=$(this).html();
+			$("#rlabel .active").removeClass("active");
+			$(this).addClass("active");
+		});
+		
+		$(".type").click(function(){
+			var name=$(this).html();
+			$("#tlabel .active").removeClass("active");
+			$(this).addClass("active");
+		});
+		
+	});
+</script>
 </html>

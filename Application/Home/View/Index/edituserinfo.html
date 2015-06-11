@@ -123,7 +123,7 @@
 							<div class="form-group">
 								<label for="inputBirth" class="col-md-2 control-label">所在城市</label>
 								<div class="col-md-4">
-									<select name="province" class="form-control">
+									<select name="province" class="form-control" id="province">
 										<option value="{$province}" selected = "selected" >{$province}</option>
 										<volist name="dprovince" id="dprovince">
 											<option value="{$dprovince.name}">{$dprovince.name}</option>
@@ -131,15 +131,15 @@
 									</select>
 								</div>
 								<div class="col-md-2">
-									<select name="city" class="form-control">
+									<select name="city" class="form-control" id="city">
 										<option value="{$city}" selected = "selected" >{$city}</option>
 										<volist name="dcity" id="dcity">
-											<option value="{$dcity.name}">{$dcity.name}</option>
+											<option class='city_a' value="{$dcity.name}">{$dcity.name}</option>
 										</volist>
 									</select>
 								</div>
 								<div class="col-md-2">
-									<select name="area" class="form-control">
+									<select name="area" class="form-control" id="area">
 										<option value="{$area}" selected = "selected" >{$area}</option>
 										<volist name="county" id="county">
 											<option value="{$county.name}">{$county.name}</option>
@@ -166,5 +166,63 @@
   </body>
   <script type="text/javascript">
 	    $(".add-on").height("25px");
+	    $(function(){
+	    	$("#province").change(function(){
+	    		var pname=$("#province").val();
+	    		$.ajax({
+	    			type:"POST",
+	    			data:"provincename="+pname,
+	    			url: "__CONTROLLER__/city",
+	    			success:function(data){
+	    				$("#city").html("");
+	    				for(var i=0;i<data.city.length;i++){
+	    					if(i==0){
+	    						$("#city").append("<option class='city_a' value="+data.city[i]+"selected = 'selected' >"+data.city[i]+"</option>");
+	    					}else{
+	    						$("#city").append("<option class='city_a' value="+data.city[i]+">"+data.city[i]+"</option>");
+	    					}
+	    				}
+	    				$("#city").change(cityChange);
+	    				
+	    				var cname=$(".city_a").eq(0).html();
+	    				$.ajax({
+	    					type:"POST",
+	    	    			data:"cityname="+cname,
+	    	    			url: "__CONTROLLER__/area",
+	    	    			success:function(area){
+	    	    				$("#area").html("");
+	    	    				for(var i=0;i<area.area.length;i++){
+	    	    					if(i==0){
+	    	    						$("#area").append("<option value="+area.area[i]+"selected = 'selected' >"+area.area[i]+"</option>");
+	    	    					}else{
+	    	    						$("#area").append("<option value="+area.area[i]+">"+area.area[i]+"</option>");
+	    	    					}
+	    	    				}
+	    	    			}
+	    				});
+	    			}
+	    		});
+	    	});
+	    	
+	    	$("#city").change(cityChange);
+	    	function cityChange(){
+	    		var cname=$("#city").val();
+	    		$.ajax({
+					type:"POST",
+	    			data:"cityname="+cname,
+	    			url: "__CONTROLLER__/area",
+	    			success:function(area){
+	    				$("#area").html("");
+	    				for(var i=0;i<area.area.length;i++){
+	    					if(i==0){
+	    						$("#area").append("<option value="+area.area[i]+"selected = 'selected' >"+area.area[i]+"</option>");
+	    					}else{
+	    						$("#area").append("<option value="+area.area[i]+">"+area.area[i]+"</option>");
+	    					}
+	    				}
+	    			}
+				});
+	    	}
+	    });
   </script>
 </html>

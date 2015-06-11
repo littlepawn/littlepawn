@@ -72,6 +72,21 @@ class IndexController extends Controller {
     	$this->ajaxReturn($data);
     }
     
+    public function area(){
+    	$cityname=$_POST['cityname'];
+    	$City=M("City");
+    	$code=$City->field("code")->where("name='$cityname'")->select();
+    	$citycode=$code['0']['code'];
+    	$Area=M("Area");
+    	$a=$Area->where("citycode='$citycode'")->select();
+    	$data=array();
+    	for($i=0;$i<count($a);$i++){
+    		$data['area'][]=$a[$i]['name'];
+    	}
+    	$data['city']=$cityname;
+    	$this->ajaxReturn($data);
+    }
+    
     public function wantedindex(){
     	import('ORG.Net.IpLocation');
     	$Ip = new \Org\Net\IpLocation('UTFWry.dat');
@@ -347,17 +362,23 @@ class IndexController extends Controller {
     		}else{
     			$this->assign('sex',$_SESSION['user']['sex']);
     		}
-    		if(!$_SESSION['user']["address"]){
+    		if(empty($_SESSION['user']["address"])){
+    			$this->assign('province',$_SESSION['user']['address']['province']);
+    			$this->assign('city',$_SESSION['user']['address']['city']);
+    			$this->assign('area',$_SESSION['user']['address']['area']);
+    		}else{
     			import('ORG.Net.IpLocation');
     			$Ip = new \Org\Net\IpLocation('UTFWry.dat');
     			$location = $Ip->getlocation();
     			$region=$location['country'];
+    			$region=substr($region,0,9);
     			$Province=M("Province");
     			if($Province->where("name='$region'")->find()<1){
     				$region="江苏省";
     			}
-    			$province=$Province->where("name='$region")->select();
+    			$province=$Province->where("name='$region'")->select();
     			$p=$Province->select();
+    			$this->assign("province",$region);
     			$this->assign("dprovince",$p);
     			$City=M("City");
     			$provincecode=$province['0']['code'];
@@ -365,12 +386,10 @@ class IndexController extends Controller {
     			$Area=M("Area");
     			$citycode=$city['0']['code'];
     			$county=$Area->where("citycode='$citycode'")->select();
+    			$this->assign("city",$city['0']['name']);
+    			$this->assign("area",$county['0']['name']);
     			$this->assign("dcity",$city);
     			$this->assign("county",$county);
-    		}else{
-    			$this->assign('province',$_SESSION['user']['address']['province']);
-    			$this->assign('city',$_SESSION['user']['address']['city']);
-    			$this->assign('area',$_SESSION['user']['address']['area']);
     		}
     		$this->display();
     	}
