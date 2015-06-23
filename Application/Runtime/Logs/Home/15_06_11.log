@@ -3932,3 +3932,44 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 
+[ 2015-06-11T20:42:06+08:00 ] 127.0.0.1 /index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-11T20:42:07+08:00 ] 127.0.0.1 /index.php/Home/Index/area
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_city` WHERE ( name='无锡市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_area` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_area` WHERE ( citycode='320200' )  [ RunTime:0.0020s ]
+
+[ 2015-06-11T20:42:08+08:00 ] 127.0.0.1 /index.php/Home/Index/area
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0060s ]
+SQL: SELECT `code` FROM `think_city` WHERE ( name='镇江市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_area` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_area` WHERE ( citycode='321100' )  [ RunTime:0.0010s ]
+
+[ 2015-06-11T20:42:09+08:00 ] 127.0.0.1 /index.php/Home/Index/area
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_city` [ RunTime:0.0070s ]
+SQL: SELECT `code` FROM `think_city` WHERE ( name='南通市' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_area` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_area` WHERE ( citycode='320600' )  [ RunTime:0.0020s ]
+
